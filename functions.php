@@ -116,6 +116,9 @@ add_action( 'widgets_init', 'ckpersonal_widgets_init' );
 function ckpersonal_scripts() {
 	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_uri() );
 
+	// Add Google Fonts: Fira Sans, Merriweather, and Rubik 
+	wp_enqueue_style( 'ckpersonal-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,700,400italic,700italic|Rubik:400,400italic,700,700italic' );
+
 	wp_enqueue_script( 'ckpersonal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'ckpersonal-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
