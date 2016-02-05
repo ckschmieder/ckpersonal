@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+## Responsive 
+--------------------------------------------------------------*/
+.site-main {
+	margin: 1.4em;
+	@include font-size(.8);
+	line-height: 1.6em;
+}
+
+@media screen and (min-width: 30em) {
+	.site-main {
+		margin: 1.8em;
+	}
+}
+
+@media screen and (min-width: 40em) {
+	.site-main {
+		@include font-size(1);
+	}
+}
+
+@media screen and (min-width: 65em) {
+	.site-main {
+		max-width: 60em;
+		margin: 1.8em auto;
+	}
+}
