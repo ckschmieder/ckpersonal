@@ -790,6 +790,43 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-header {
   background-color: #000;
+  background-size: cover;
+}
+
+.site-logo {
+  position: relative;
+}
+.site-logo a {
+  position: absolute;
+  z-index: 10;
+  top: 1em;
+  left: 1em;
+  display: block;
+  width: 2em;
+  height: 2em;
+  background: black;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+}
+.site-logo a:hover,
+.site-logo a:focus {
+  outline: 2px solid white;
+}
+
+.site-firstletter {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.site-logo a:hover .site-firstletter,
+.site-logo a:focus .site-firstletter {
+  background: white;
+  color: black;
 }
 
 .site-branding {
