@@ -20,9 +20,31 @@
 	}
 }
 
-@media screen and (min-width: 65em) {
+@media screen and (min-width: 57em) {
 	.site-main {
-		max-width: 60em;
+		max-width: 45em;
 		margin: 1.8em auto;
 	}
+}
+
+.page-title {
+	text-align: center;
+	font-style: italic;
+	@include font-size-em(1.4);
+}
+
+.page-header::after {
+	display: block;
+	content: "";
+	width: 3.5em;
+	border-bottom: 1px solid #c3c3c3;
+	margin: 2em auto;
+}
+
+.taxonomy-description {
+    margin-top: 1.5em;
+    border: 1px solid #c3c3c3;
+    padding: .5em 1.8em 0;
+    text-align: center;
+    font-style: italic;
 }
