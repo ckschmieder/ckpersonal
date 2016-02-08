@@ -35,4 +35,13 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
+figure {
+	margin: 1em 0;
+}
+
+/* figure {
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+ */
 @import "tables";

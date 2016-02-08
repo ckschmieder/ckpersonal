@@ -119,7 +119,14 @@ function ckpersonal_scripts() {
 	// Add Google Fonts: Fira Sans, Merriweather, and Rubik 
 	wp_enqueue_style( 'ckpersonal-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,700,400italic,700italic|Rubik:400,400italic,700,700italic' );
 
-	wp_enqueue_script( 'ckpersonal-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	// Add Font Awesome icons (http://fontawesome.io)
+	wp_enqueue_style( 'ckpersonal-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
+
+	wp_enqueue_script( 'ckpersonal-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery'), '20120206', true );
+	wp_localize_script( 'ckpersonal-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'ckpersonal' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'ckpersonal' ) . '</span>',
+	) );
 
 	wp_enqueue_script( 'ckpersonal-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
