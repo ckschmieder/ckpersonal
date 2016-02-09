@@ -1679,6 +1679,20 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+  padding: 6em 1em;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+.site-footer a {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
