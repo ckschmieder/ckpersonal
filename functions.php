@@ -117,6 +117,12 @@ add_action( 'widgets_init', 'ckpersonal_widgets_init' );
 function ckpersonal_scripts() {
 	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_uri() );
 
+	// Load stylesheet and scripts for the front-page only when on the front page
+	if ( is_front_page() ) {
+		wp_enqueue_style( 'front-page-styles', get_stylesheet_directory_uri() . '/style-front-page.css');
+		wp_enqueue_script( 'front-page-script', get_stylesheet_directory_uri() . '/js/frontpagescripts.js', array('jquery'), '20151117');
+	}
+
 	// Add Google Fonts: Fira Sans, Merriweather, and Rubik 
 	wp_enqueue_style( 'ckpersonal-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,700,400italic,700italic|Rubik:400,400italic,700,700italic' );
 

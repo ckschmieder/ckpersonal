@@ -42,7 +42,8 @@ module.exports = function (grunt) {
 					precision: 4
 				},
 				files  : {
-					'style.css': 'sass/style.scss'
+					'style.css': 'sass/style.scss',
+					'style-front-page.css': 'sass/style-front-page.scss'
 				}
 			}
 		},
