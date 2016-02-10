@@ -69,7 +69,7 @@
 --------------------------------------------------------------*/
 
 #jumbotron {
-    display: none; // Section will be removed if unused
+    //display: none; // Section will be removed if unused
     background: #fff;
     background: hsl(0, 100%, 100%);
 }
@@ -83,7 +83,7 @@
     color:  hsl(0, 0%, 0%);
     background: white;
 	background: hsl(0, 100%, 100%);
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 #profile h2.section-title {

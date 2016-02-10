@@ -63,7 +63,6 @@
 # Jumbotron
 --------------------------------------------------------------*/
 #jumbotron {
-  display: none;
   background: #fff;
   background: white;
 }
@@ -76,7 +75,7 @@
   color: black;
   background: white;
   background: white;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 #profile h2.section-title {

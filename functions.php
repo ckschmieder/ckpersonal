@@ -115,16 +115,30 @@ add_action( 'widgets_init', 'ckpersonal_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ckpersonal_scripts() {
-	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_uri() );
 
-	// Load stylesheet and scripts for the front-page only when on the front page
+	// Add Bootstrap JS
+	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
+
+	// Add Bootstrap CSS
+	wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/css/bootstrap.css');
+	
+	// Add MY styles
+	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_directory_uri() . '/style.css' );
+
+	// Load stylesheet and scripts for the front-page
+	wp_enqueue_style( 'front-page-styles', get_stylesheet_directory_uri() . '/style-front-page.css');
+	wp_enqueue_script( 'front-page-script', get_stylesheet_directory_uri() . '/js/frontpagescripts.js', array('jquery'), '20151117');
+
+	/*// Load stylesheet and scripts for the front-page only when on the front page
 	if ( is_front_page() ) {
 		wp_enqueue_style( 'front-page-styles', get_stylesheet_directory_uri() . '/style-front-page.css');
 		wp_enqueue_script( 'front-page-script', get_stylesheet_directory_uri() . '/js/frontpagescripts.js', array('jquery'), '20151117');
-	}
+	}*/
 
 	// Add Google Fonts: Fira Sans, Merriweather, and Rubik 
 	wp_enqueue_style( 'ckpersonal-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,700,400italic,700italic|Rubik:400,400italic,700,700italic' );
+
+
 
 	// Add Font Awesome icons (http://fontawesome.io)
 	wp_enqueue_style( 'ckpersonal-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );

@@ -13,7 +13,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <!-- Jumbotron -->
 		<section id="jumbotron" class="lander-section">
-			<div class="indent clear">				
+			<div class="indent clear">
+			<div class="row">
+				<div id="box1" class="col-lg-8">Box 1</div>
+				<div id="box2" class="col-lg-4">Box 2</div>
+			</div>			
 				<?php 
 				$query = new WP_Query( 'pagename=jumbotron' );
 				// The Loop
