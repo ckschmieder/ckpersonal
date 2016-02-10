@@ -9,10 +9,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 ?>
 
 <div id="primary" class="content-area lander-page">
-	<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main lander-main" role="main">
 
 <!-- Jumbotron -->
-		<section id="jumbotron">
+		<section id="jumbotron" class="lander-section">
 			<div class="indent clear">
 				<?php 
 				$query = new WP_Query( 'pagename=jumbotron' );
@@ -29,11 +29,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				wp_reset_postdata();
 				?>
 			</div>
-		</section><!-- #jumbotron -->
+		</section>
 <!-- END Jumbotron -->
 
 <!-- Profile -->
-		<section id="profile">
+		<section id="profile" class="lander-section">
 			<div class="indent clear">
 				<?php 
 				$query = new WP_Query( 'pagename=profile' );
@@ -43,6 +43,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						$query->the_post();
 						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
 						echo '<div class="entry-content">';
+						echo '<figure class="profile-thumb profile-col">';
+						the_post_thumbnail('medium','style=max-width:180px;');
+						echo '</figure>';
+						
 						the_content();
 						echo '</div>';
 					}
@@ -51,11 +55,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				wp_reset_postdata();
 				?>
 			</div><!-- .indent -->
-		</section><!-- #profile -->
+		</section>
 <!-- END Profile -->
 
 <!-- Competencies -->
-		<section id="competencies">
+		<section id="competencies" class="lander-section">
 			<div class="indent clear">
 				<?php 
 				$query = new WP_Query( 'pagename=competencies' );
@@ -63,7 +67,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				if ( $query->have_posts() ) {
 					while ( $query->have_posts() ) {
 						$query->the_post();
-						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
+						/*echo '<h2 class="section-title">' . get_the_title() . '</h2>';*/
 						echo '<div class="entry-content">';
 						the_content();
 						echo '</div>';
@@ -73,50 +77,73 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				wp_reset_postdata();
 				?>
 			</div><!-- .indent -->
-		</section><!-- #competencies -->
+		</section>
 <!-- END Competencies -->
 
 <!-- Works -->
-		<section id="works">
-			<div class="indent">
-				
+		<section id="works" class="lander-section">
+			<div class="indent clear">
 				<?php 
-				$args = array(
-					'posts_per_page' => 3,
-					'orderby' => 'rand',
-					'category_name' => 'works'
-				);
-				$query = new WP_query( $args );
+				$query = new WP_Query( 'pagename=works' );
+				$works_id = $query->queried_object->ID;				
+
 				// The Loop
 				if ( $query->have_posts() ) {
-					echo '<ul class="works">';
 					while ( $query->have_posts() ) {
 						$query->the_post();
-						$more = 0;		// Sets value of $more to false
-						echo '<li class="clear">';
-						echo '<figure class="work-thumb">';
-						the_post_thumbnail('work-mug');
-						echo '</figure>';
-						echo '<aside class="work-text">';
-						echo '<h3 class="work-name">' . get_the_title() . '</h3>';
-						echo '<div class="work-excerpt">';
-						the_excerpt('');
+						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
+						echo '<div class="entry-content">';
+						the_content('');
 						echo '</div>';
-						echo '</aside>';
-						echo '</li>';
 					}
-					echo '</ul>';
 				}
+
 				/* Restore original Post Data */
 				wp_reset_postdata();
-				?>
+
+				$args = array(
+					'post_type' => 'page',
+					'post_parent' => $works_id
+				);
+				$works_query = new WP_Query( $args );
+				
+				// The Loop
+				if ( $works_query->have_posts() ) {
+					
+					echo '<div class="cards">';
+					while ( $works_query->have_posts() ) {
+						$works_query->the_post();
+
+						echo '<div class="card">';
+						echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
+						echo '<figure class="work-thumb">';
+						the_post_thumbnail( 'large','style=width:100%;max-width:100%;height:auto;');
+						echo '</figure>';
+						echo '<aside class="card-content">';
+						echo '<h2 class="works-title">';
+						the_title();
+						echo '</h2>';
+						echo '<p>';
+						the_content();
+						echo '</p>';
+						echo '</aside>';
+						echo '</a>';
+						echo '</div>';
+
+					}
+					echo '</div>';
+				}
+
+				/* Restore original Post Data */
+				wp_reset_postdata();
+				?>				
 
 			</div><!-- .indent -->
-		</section><!-- #works -->
+		</section>
 <!-- END Works -->
 
 <!-- Contact -->
-		<section id="contact">
+		<section id="contact" class="lander-section">
 			<div class="indent clear">			
 				<?php 
 				$query = new WP_Query( 'pagename=contact' );
@@ -134,7 +161,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				wp_reset_postdata();
 				?>
 			</div><!-- .indent -->
-		</section><!-- #contact -->
+		</section>
 <!-- END Contact -->
 		
 

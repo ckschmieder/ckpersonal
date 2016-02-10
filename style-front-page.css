@@ -1,235 +1,62 @@
 /*Styles for the front page*/
 /*--------------------------------------------------------------
-# Normalize
+# Front-Page Styles
 --------------------------------------------------------------*/
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+.content-area.lander-page {
+  margin-left: 0;
+  padding-left: 0;
 }
 
-body {
+.site-main.lander-main {
   margin: 0;
+  max-width: 100%;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-[hidden],
-template {
-  display: none;
-}
-
-a {
-  background-color: transparent;
-}
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
+.lander-page .entry-content {
   position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-img {
-  border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-figure {
-  margin: 1em 40px;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
-pre {
-  overflow: auto;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
+  max-width: 100%;
+  padding: 0;
   margin: 0;
 }
 
-button {
-  overflow: visible;
+.indent {
+  margin: 0 2rem;
+  max-width: 1120px;
 }
 
-button,
-select {
-  text-transform: none;
+@media screen and (min-width: 760px) {
+  .indent {
+    margin: 0;
+    padding: 0 4rem;
+  }
 }
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
+@media screen and (min-width: 1100px) {
+  .indent {
+    margin: 0 auto;
+  }
 }
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input {
-  line-height: normal;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-}
-
-textarea {
-  overflow: auto;
-}
-
-optgroup {
-  font-weight: bold;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
 /*--------------------------------------------------------------
 # Content Area
 --------------------------------------------------------------*/
 .content-area {
-  background: #c3c3c3;
-  /* background: hsl(0, 0%, 100%); */
+  background: #F3EFE0;
+}
+
+.lander-section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #F3EFE0;
 }
 
 /*--------------------------------------------------------------
 # Jumbotron
 --------------------------------------------------------------*/
 #jumbotron {
+  display: none;
   background: #fff;
   background: white;
 }
@@ -238,42 +65,110 @@ th {
 # Profile
 --------------------------------------------------------------*/
 #profile {
-  color: #fff;
-  color: white;
-  background: black;
-  /* background: hsl(0, 100%, 0%); */
-  padding: 4rem 0;
+  color: black;
+  color: black;
+  background: white;
+  background: white;
+  font-size: .8rem;
 }
 
+#profile h2.section-title {
+  text-align: center;
+}
+
+@media screen and (min-width: 450px) {
+  #profile .entry-content {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
+.profile-col {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.profile-thumb {
+  text-align: center;
+}
+.profile-thumb img {
+  border-radius: 1000px;
+  border: 8px solid #F3EFE0;
+}
+
+@media screen and (min-width: 450px) {
+  .about {
+    order: 1;
+  }
+
+  .profile-thumb {
+    order: 2;
+  }
+
+  .details {
+    order: 3;
+  }
+}
 /*--------------------------------------------------------------
 # Competencies
 --------------------------------------------------------------*/
 #competencies {
-  padding: 4rem 0;
   background: #e6e6e6;
 }
 
 /*--------------------------------------------------------------
 # Works
 --------------------------------------------------------------*/
-#works {
-  padding: 4rem 0;
+.cards {
+  display: block;
 }
 
+.card {
+  background: white;
+  margin-bottom: 1em;
+}
+.card a {
+  text-decoration: none;
+  color: black;
+}
+.card a:hover,
+.card a:focus {
+  box-shadow: 3px 3px 8px #000;
+}
+
+.card-content {
+  padding: 1.4em;
+}
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-weight: normal;
+  font-size: 2em;
+}
+.card-content p {
+  font-size: 95%;
+}
+
+@media screen and (min-width: 40em) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    display: flex;
+    flex: 0 1 calc(50% - 1em);
+    margin-bottom: 2em;
+  }
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 #contact {
-  padding-top: 4rem;
-  padding-bottom: 6rem;
   color: #fff;
   color: white;
   background-color: black;
   /* background: hsl(204, 100%, 24%); */
-}
-
-#contact {
-  padding: 4rem 0;
 }
 
 /*# sourceMappingURL=style-front-page.css.map */
