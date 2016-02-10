@@ -1,7 +1,5 @@
 /* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
 
-@import "../node_modules/bourbon/app/assets/stylesheets/bourbon";
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -157,7 +155,8 @@
 # Works
 --------------------------------------------------------------*/
 #works {
-
+    background: white;
+    background: hsl(0, 100%, 100%);
 }
 
 .cards {
@@ -165,7 +164,7 @@
 }
 
 .card {
-    background: white;
+    background-color: #F3EFE0;
     margin-bottom: 1em;
 
     a {

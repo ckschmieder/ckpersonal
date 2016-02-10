@@ -139,12 +139,17 @@
 /*--------------------------------------------------------------
 # Works
 --------------------------------------------------------------*/
+#works {
+  background: white;
+  background: white;
+}
+
 .cards {
   display: block;
 }
 
 .card {
-  background: white;
+  background-color: #F3EFE0;
   margin-bottom: 1em;
 }
 .card a {
