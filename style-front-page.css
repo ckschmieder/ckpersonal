@@ -1,6 +1,16 @@
-/*Styles for the front page*/
+/* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
 /*--------------------------------------------------------------
-# Front-Page Styles
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Content Area
+# Jumbotron
+# Profile
+# Competencies
+# Works
+# Contact
+
+/*--------------------------------------------------------------
+# Content Area
 --------------------------------------------------------------*/
 .content-area.lander-page {
   margin-left: 0;
@@ -35,9 +45,6 @@
     margin: 0 auto;
   }
 }
-/*--------------------------------------------------------------
-# Content Area
---------------------------------------------------------------*/
 .content-area {
   background: #F3EFE0;
 }
@@ -112,7 +119,21 @@
 # Competencies
 --------------------------------------------------------------*/
 #competencies {
-  background: #e6e6e6;
+  background-color: #F3EFE0;
+}
+#competencies ul {
+  list-style: none;
+  padding-left: 0;
+}
+#competencies .using {
+  float: left;
+}
+#competencies .learning {
+  float: right;
+}
+#competencies .codepen-link {
+  clear: both;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------

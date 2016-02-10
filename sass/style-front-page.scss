@@ -1,11 +1,23 @@
-/*Styles for the front page*/
+/* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
+
+@import "../node_modules/bourbon/app/assets/stylesheets/bourbon";
 
 /*--------------------------------------------------------------
-# Front-Page Styles
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Content Area
+# Jumbotron
+# Profile
+# Competencies
+# Works
+# Contact
+
+/*--------------------------------------------------------------
+# Content Area
 --------------------------------------------------------------*/
 
 .content-area.lander-page {
-    margin-left: 0; 
+    margin-left: 0;
     padding-left: 0; 
 }
 
@@ -40,10 +52,6 @@
         margin: 0 auto;
     }
 }
-
-/*--------------------------------------------------------------
-# Content Area
---------------------------------------------------------------*/
 
 .content-area {
 	background: #F3EFE0;
@@ -123,12 +131,35 @@
 --------------------------------------------------------------*/
 
 #competencies {
-    background: hsl(0, 0%, 90%);
+    background-color: #F3EFE0;
+    // background-color: hsl(0, 0%, 90%);
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .using {
+        float: left;
+    }
+
+    .learning {
+        float: right;
+    }
+
+    .codepen-link {
+        clear: both;
+        text-align: center;
+    }
 }
 
 /*--------------------------------------------------------------
 # Works
 --------------------------------------------------------------*/
+#works {
+
+}
+
 .cards {
     display: block;
 }
@@ -179,17 +210,11 @@
 }
 
 
-#works {
-
-}
-
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 
 #contact {
-    // padding-top: 4rem;
-    // padding-bottom: 6rem;
 	color: #fff;
     color: hsl(0, 0%, 100%);
 	background-color: black;

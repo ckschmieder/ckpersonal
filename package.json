@@ -14,10 +14,9 @@
   },
   "homepage": "https://github.com/ckschmieder/ckpersonal",
   "dependencies": {
-    
+    "bourbon": "^4.2.6",
     "jquery": "^2.1.4"
   },
-
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
     "grunt": "^0.4.5",
