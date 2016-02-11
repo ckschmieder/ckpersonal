@@ -5,13 +5,15 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Navbar
 # Content Area
 # Jumbotron
 # Profile
 # Competencies
 # Works
 # Contact
-# Navbar
+# Text Animation
+
 
 /*--------------------------------------------------------------
 # Navbar
@@ -110,16 +112,17 @@
     margin: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    // display: flex;
     align-items: center;
     background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
 
     .container {
+        float: left;
         margin-bottom: 7rem;
+        text-align: left;
 
         h1, h2, h3, h4, p {
-        color: #F2F2F2;
-        text-align: center;
+        color: #F2F2F2;        
         font-family: 'Schoolbell', cursive;
         }
 
@@ -330,29 +333,143 @@
     background-size: cover;
 
     h2, h4, p {
-	color: #F2F2F2;
-    color: hsl(0, 0%, 95%);
+	    color: #FCFCFC;
+        color: hsl(0, 0%, 95%);
     }
 
-	// background-color: black;
-    /* background: hsl(204, 100%, 24%); */
+    .wpcf7 {
+        background-color: transparent;
+        color: white;
+        line-height: 2;
+    
+        .wpcf7-text,
+        .wpcf7-textarea {
+            color: white;
+            line-height: 2;
+            background-color: transparent;
+            border: 1px solid rgba(156, 156, 156, 0.75);
+        }
+    }
+
+    
+
 }
 
-input {
+
+/* 
+#contact .wpcf7 {
+    margin: 2rem 0 0 0;
+    padding: 0;
+
+    input {
     background-color: transparent;
     color: #FCFCFC;
-    border: 1px dashed rgba(156, 156, 156, 0.65);
+    border: 1px solid rgba(156, 156, 156, 0.75);
     line-height: 2.5;
+    }
 }
-input:focus {
+
+
+input:focus,
+input:active {
     color: #FCFCFC;
 }
 textarea {
     background-color: transparent;
     color: #FCFCFC;
-    border: 1px solid rgba(156, 156, 156, 0.65);
+    border: 1px solid rgba(156, 156, 156, 0.75);
     line-height: 2.5;
 }
-textarea:focus {
+textarea:focus,
+textarea:active {
     color: #FCFCFC;
 }
+
+.wpcf7
+{
+    background-color: #f7f7f7;
+    border: 2px solid #0f0;
+} */
+
+
+/*--------------------------------------------------------------
+# Text Animation
+--------------------------------------------------------------*/
+
+.jumbotron {
+    h1 {
+      /* color: lime; 
+      font-family: "Courier";
+      font-size: 36px;
+      margin: 10px 0 0 10px; */
+      white-space: nowrap;
+      overflow: hidden;
+      width: 120px;
+      animation: type 1.2s steps(20, end); 
+    }
+
+    h1:nth-child(2){
+        width: 80vw;
+        animation: type2 4.8s steps(40, end);
+    }
+
+
+    /* h2 a{
+      color: lime;
+      text-decoration: none;
+    } */
+
+    p {
+        /* color: #FCFCFC; 
+        font-family: "";
+        font-size: 20px;
+        margin: 10px 0 0 10px; */
+        white-space: nowrap;
+        overflow: hidden;
+        // width: 320px;
+        animation: type 4s steps(60, end); 
+    }
+
+    p:nth-child(2) {
+        animation: type2 8s steps(60, end);
+    }
+
+    p:nth-child(3) {
+        width: 80vw;
+        animation: type2 9s steps(60, end);
+    }
+    p:nth-child(4) {
+        width: 80vw;
+        animation: type2 12s steps(60, end);
+    }
+    p:nth-child(5) {
+        width: 80vw;
+        animation: type2 16s steps(60, end);
+    }
+}
+/* .text-animated a{
+  color: lime;
+  text-decoration: none;
+} */
+
+/* span.cursor-stop{
+  animation: blink 1s infinite;
+} */
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+/* ::selection{
+  background: yellow;
+} */

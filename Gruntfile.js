@@ -50,7 +50,8 @@ module.exports = function (grunt) {
 
 		autoprefixer: {
 			multiple_files: {
-				src: "style.css"
+				src: "style.css",
+				src: "style-front-page.css"
 			}
 		},
 

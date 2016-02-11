@@ -15,10 +15,9 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 		<section id="jumbotron" class="lander-section">
 			<div class="jumbotron">
 		      <div class="container">
-		        <h1>Hi! I'm Chris...</h1>
-		        <p>..a "developing" web developer.</p>
-		        <p>Scroll down. There's more to see!</p>
-		        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Scroll down.. there's more to see!</a></p> -->
+		        <h1>Hi!</h1>
+		        <h1>I'm Chris...</h1>
+		        <p>a "developing" web developer.<br></br>Scroll ↓ to have a look around!</p>
 		      </div>
 		    </div>
 		</section>
