@@ -1,5 +1,7 @@
 /* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
 
+@import "tiles";
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -9,7 +11,18 @@
 # Competencies
 # Works
 # Contact
+# Navbar
 
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 50em) {
+    .main-navigation {
+        position: fixed;
+        background-color: transparent;
+    }
+}
 /*--------------------------------------------------------------
 # Content Area
 --------------------------------------------------------------*/
@@ -38,10 +51,34 @@
     max-width: 1120px;
 }
 
+.content-area {
+    background: #F3EFE0;
+
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+ .lander-section {
+    padding: 1rem 0;
+ }
+
+.section-title {
+    color: #22A39F;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    border-bottom: 2px solid #F3EFE0;
+}
+
 @media screen and (min-width: 760px) {
     .indent {
         margin: 0;
         padding: 0 4rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
     }
 }
 
@@ -51,28 +88,61 @@
     }
 }
 
-.content-area {
-	background: #F3EFE0;
-}
 
- .lander-section {
-    padding: 3rem 0;
- }
 
-.section-title {
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #F3EFE0;
-}
+
+
 /*--------------------------------------------------------------
 # Jumbotron
 --------------------------------------------------------------*/
 
 #jumbotron {
-    display: none; // Section will be removed if unused
-    background: #fff;
-    background: hsl(0, 100%, 100%);
+    //display: none; // Section will be removed if unused
+    //background: #c3c3c3;
+    //background: hsl(0, 0%, 70%);
+    padding: 0;
+    margin: 0;
 }
+
+
+.jumbotron {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
+
+    .container {
+        margin-bottom: 7rem;
+
+        h1, h2, h3, h4, p {
+        color: #F2F2F2;
+        text-align: center;
+        font-family: 'Schoolbell', cursive;
+        }
+
+        h1 {font-size: 2.5rem;}
+        p {font-size: 1rem;}
+
+    }    
+}
+
+@media screen and (min-width: 360px) {
+    .jumbotron .container {
+        h1 {font-size: 3rem;}
+        p {font-size: 1.25rem;}
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .jumbotron .container {
+        h1 {font-size: 6rem;}
+        p {font-size: 1.5rem;}
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Profile
@@ -81,24 +151,57 @@
 #profile {
     color: black;
     color:  hsl(0, 0%, 0%);
-    background: white;
-	background: hsl(0, 100%, 100%);
-    font-size: .8rem;
+    background: #F2F2F2;
+    background: hsl(0, 0%, 95%);
+    // font-size: 1rem; 
+
+    .entry-content {
+        display: flex;
+        flex-direction: column;
+
+        .about-col {
+            order: 1;
+            padding: 0 20px;
+            flex: 1;
+            // flex-basis: 45%;
+
+        }
+        .profile-thumb {
+            order: 2;
+            flex: 1;
+            padding: 0 20px;
+            // flex-basis: 30%;
+        }
+        .details-col {
+            order: 3;
+            flex: 1;
+            // flex-basis: 25%;
+            padding: 0 20px;
+            text-align: center;
+
+        }
+    }
 }
 
 #profile h2.section-title {
     text-align: center;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 760px) {
     #profile .entry-content {
-        display: flex;
-        flex-flow: row nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .details-col {
+            text-align: left;
+        }
     }
 }
 
 .profile-col {
     flex: 1;
     padding: 0 20px;
+
 }
 
 .profile-thumb {
@@ -112,17 +215,6 @@
     }
 }
 
-@media screen and (min-width: 450px) {
-    .about {
-        order: 1;
-    }
-    .profile-thumb {
-        order: 2;
-    }
-    .details {
-        order: 3;
-    }
-}
 
 /*--------------------------------------------------------------
 # Competencies
@@ -135,6 +227,13 @@
     ul {
         list-style: none;
         padding-left: 0;
+        margin-left: 0;
+
+        li {
+            display: inline-block;
+            font-family: sans-serif;
+            padding: .2em;
+        }
     }
 
     .using {
@@ -154,9 +253,11 @@
 /*--------------------------------------------------------------
 # Works
 --------------------------------------------------------------*/
+
+
 #works {
-    background: white;
-    background: hsl(0, 100%, 100%);
+    background: #F2F2F2;
+    background: hsl(0, 0%, 95%);
 }
 
 .cards {
@@ -165,7 +266,7 @@
 
 .card {
     background-color: #F3EFE0;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 
     a {
         text-decoration: none;
@@ -208,17 +309,50 @@
     }
 }
 
+#works .my-project {
+    padding: 0;
+}
+
+#works2 {
+    display: none;
+}
+#test {
+    display: none;
+}
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 
 #contact {
-	color: #fff;
-    color: hsl(0, 0%, 100%);
-	background-color: black;
+
+    background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
+    background-size: cover;
+
+    h2, h4, p {
+	color: #F2F2F2;
+    color: hsl(0, 0%, 95%);
+    }
+
+	// background-color: black;
     /* background: hsl(204, 100%, 24%); */
 }
- 
-#contact {
+
+input {
+    background-color: transparent;
+    color: #FCFCFC;
+    border: 1px dashed rgba(156, 156, 156, 0.65);
+    line-height: 2.5;
+}
+input:focus {
+    color: #FCFCFC;
+}
+textarea {
+    background-color: transparent;
+    color: #FCFCFC;
+    border: 1px solid rgba(156, 156, 156, 0.65);
+    line-height: 2.5;
+}
+textarea:focus {
+    color: #FCFCFC;
 }

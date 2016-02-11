@@ -1,4 +1,65 @@
 /* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+.hover-tile-outer {
+  background: url("http://localhost/wordpress/wp-content/uploads/2016/02/IslandEmbroidery_screenshot2-1024x647.jpg");
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  height: 20em;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 40em) {
+  .hover-tile-outer {
+    width: 50%;
+  }
+}
+.hover-tile-outer .hover-tile-container {
+  height: 20em;
+  overflow: hidden;
+}
+
+.hover-tile-outer .hover-tile-container:hover > .hover-tile {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+
+.hover-tile-outer .hover-tile {
+  -webkit-transition: all, 0.2s ease-in-out;
+  -moz-transition: all, 0.2s ease-in-out;
+  transition: all, 0.2s ease-in-out;
+  background: inherit;
+  color: white;
+  height: inherit;
+  overflow: hidden;
+  padding: 1.5em;
+}
+
+.hover-tile-outer .hover-tile-hidden {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hover-tile-outer .hover-tile-hidden p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5em;
+}
+
+.hover-tile-outer .hover-tile-hidden h4 {
+  margin: 0 0 0.5em 0;
+}
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -8,7 +69,17 @@
 # Competencies
 # Works
 # Contact
+# Navbar
 
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+@media screen and (min-width: 50em) {
+  .main-navigation {
+    position: fixed;
+    background-color: transparent;
+  }
+}
 /*--------------------------------------------------------------
 # Content Area
 --------------------------------------------------------------*/
@@ -34,10 +105,33 @@
   max-width: 1120px;
 }
 
+.content-area {
+  background: #F3EFE0;
+}
+.content-area h4 {
+  font-size: 1.5rem;
+}
+
+.lander-section {
+  padding: 1rem 0;
+}
+
+.section-title {
+  color: #22A39F;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  border-bottom: 2px solid #F3EFE0;
+}
+
 @media screen and (min-width: 760px) {
   .indent {
     margin: 0;
     padding: 0 4rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -45,48 +139,96 @@
     margin: 0 auto;
   }
 }
-.content-area {
-  background: #F3EFE0;
-}
-
-.lander-section {
-  padding: 3rem 0;
-}
-
-.section-title {
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #F3EFE0;
-}
-
 /*--------------------------------------------------------------
 # Jumbotron
 --------------------------------------------------------------*/
 #jumbotron {
-  display: none;
-  background: #fff;
-  background: white;
+  padding: 0;
+  margin: 0;
 }
 
+.jumbotron {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
+}
+.jumbotron .container {
+  margin-bottom: 7rem;
+}
+.jumbotron .container h1, .jumbotron .container h2, .jumbotron .container h3, .jumbotron .container h4, .jumbotron .container p {
+  color: #F2F2F2;
+  text-align: center;
+  font-family: 'Schoolbell', cursive;
+}
+.jumbotron .container h1 {
+  font-size: 2.5rem;
+}
+.jumbotron .container p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 360px) {
+  .jumbotron .container h1 {
+    font-size: 3rem;
+  }
+  .jumbotron .container p {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  .jumbotron .container h1 {
+    font-size: 6rem;
+  }
+  .jumbotron .container p {
+    font-size: 1.5rem;
+  }
+}
 /*--------------------------------------------------------------
 # Profile
 --------------------------------------------------------------*/
 #profile {
   color: black;
   color: black;
-  background: white;
-  background: white;
-  font-size: .8rem;
+  background: #F2F2F2;
+  background: #f2f2f2;
+}
+#profile .entry-content {
+  display: flex;
+  flex-direction: column;
+}
+#profile .entry-content .about-col {
+  order: 1;
+  padding: 0 20px;
+  flex: 1;
+}
+#profile .entry-content .profile-thumb {
+  order: 2;
+  flex: 1;
+  padding: 0 20px;
+}
+#profile .entry-content .details-col {
+  order: 3;
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
 }
 
 #profile h2.section-title {
   text-align: center;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 760px) {
   #profile .entry-content {
-    display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #profile .entry-content .details-col {
+    text-align: left;
   }
 }
 .profile-col {
@@ -102,19 +244,6 @@
   border: 8px solid #F3EFE0;
 }
 
-@media screen and (min-width: 450px) {
-  .about {
-    order: 1;
-  }
-
-  .profile-thumb {
-    order: 2;
-  }
-
-  .details {
-    order: 3;
-  }
-}
 /*--------------------------------------------------------------
 # Competencies
 --------------------------------------------------------------*/
@@ -124,6 +253,12 @@
 #competencies ul {
   list-style: none;
   padding-left: 0;
+  margin-left: 0;
+}
+#competencies ul li {
+  display: inline-block;
+  font-family: sans-serif;
+  padding: .2em;
 }
 #competencies .using {
   float: left;
@@ -140,8 +275,8 @@
 # Works
 --------------------------------------------------------------*/
 #works {
-  background: white;
-  background: white;
+  background: #F2F2F2;
+  background: #f2f2f2;
 }
 
 .cards {
@@ -150,7 +285,7 @@
 
 .card {
   background-color: #F3EFE0;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 .card a {
   text-decoration: none;
@@ -187,14 +322,51 @@
     margin-bottom: 2em;
   }
 }
+#works .my-project {
+  padding: 0;
+}
+
+#works2 {
+  display: none;
+}
+
+#test {
+  display: none;
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 #contact {
-  color: #fff;
-  color: white;
-  background-color: black;
+  background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
+  background-size: cover;
   /* background: hsl(204, 100%, 24%); */
+}
+#contact h2, #contact h4, #contact p {
+  color: #F2F2F2;
+  color: #f2f2f2;
+}
+
+input {
+  background-color: transparent;
+  color: #FCFCFC;
+  border: 1px dashed rgba(156, 156, 156, 0.65);
+  line-height: 2.5;
+}
+
+input:focus {
+  color: #FCFCFC;
+}
+
+textarea {
+  background-color: transparent;
+  color: #FCFCFC;
+  border: 1px solid rgba(156, 156, 156, 0.65);
+  line-height: 2.5;
+}
+
+textarea:focus {
+  color: #FCFCFC;
 }
 
 /*# sourceMappingURL=style-front-page.css.map */

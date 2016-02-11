@@ -226,6 +226,7 @@
 	}
 	.main-navigation ul {
 		display: block;
+		min-height: 4em;
 	}
 }
 
@@ -281,7 +282,6 @@
 	.main-navigation.toggled {
 		position: relative;
 		min-height: 3.5em;
-		max-width: 58em;
 		margin: 0 auto;
 		padding: 0 3.5em;
 		background-color: #000;

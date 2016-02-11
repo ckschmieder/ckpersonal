@@ -13,28 +13,20 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <!-- Jumbotron -->
 		<section id="jumbotron" class="lander-section">
-			<div class="indent clear">				
-				<?php 
-				$query = new WP_Query( 'pagename=jumbotron' );
-				// The Loop
-				if ( $query->have_posts() ) {
-					while ( $query->have_posts() ) {
-						$query->the_post();
-						echo '<div class="entry-content">';
-						the_content();
-						echo '</div>';
-					}
-				}					
-				/* Restore original Post Data */
-				wp_reset_postdata();
-				?>
-			</div>
+			<div class="jumbotron">
+		      <div class="container">
+		        <h1>Hi! I'm Chris...</h1>
+		        <p>..a "developing" web developer.</p>
+		        <p>Scroll down. There's more to see!</p>
+		        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Scroll down.. there's more to see!</a></p> -->
+		      </div>
+		    </div>
 		</section>
 <!-- END Jumbotron -->
 
 <!-- Profile -->
 		<section id="profile" class="lander-section">
-			<div class="indent clear">
+			<div class="container">
 				<?php 
 				$query = new WP_Query( 'pagename=profile' );
 				// The Loop
@@ -43,8 +35,8 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						$query->the_post();
 						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
 						echo '<div class="entry-content">';
-						echo '<figure class="profile-thumb profile-col">';
-						the_post_thumbnail('medium','style=max-width:180px;');
+						echo '<figure class="profile-thumb">';
+						the_post_thumbnail('medium','style=max-width:240px;');
 						echo '</figure>';
 						
 						the_content();
@@ -82,7 +74,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <!-- Works -->
 		<section id="works" class="lander-section">
-			<div class="indent clear">
+			<div class="container">
 				<?php 
 				$query = new WP_Query( 'pagename=works' );
 				$works_id = $query->queried_object->ID;				
@@ -131,13 +123,77 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						echo '</div>';
 
 					}
-					echo '</div>';
+					echo '</div>';					
 				}
 
 				/* Restore original Post Data */
 				wp_reset_postdata();
 				?>				
 
+			</div><!-- .indent -->
+		</section>
+<!-- END Works -->
+
+<!-- Works -->
+		<section id="works2" class="lander-section">
+			<div class="container">
+				<?php 
+				$query = new WP_Query( 'pagename=works' );
+				$works_id = $query->queried_object->ID;				
+
+				// The Loop
+				if ( $query->have_posts() ) {
+					while ( $query->have_posts() ) {
+						$query->the_post();
+						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
+						echo '</div>';
+						echo '<div class="container-fluid">';
+						
+					}
+				}
+
+				/* Restore original Post Data */
+				wp_reset_postdata();
+
+				$args = array(
+					'post_type' => 'page',
+					'post_parent' => $works_id
+				);
+				$works_query = new WP_Query( $args );
+				
+				// The Loop
+				if ( $works_query->have_posts() ) {
+					
+					echo '<div class="row">';
+					while ( $works_query->have_posts() ) {
+						$works_query->the_post();
+
+						echo '<div class="my-project col-sm-6">';
+						echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
+						echo '<figure class="work-img">';
+						the_post_thumbnail( 'large','style=width:100%;max-width:100%;height:auto;');
+						echo '</figure>';
+						//echo '<aside class="card-content">';
+						//echo '<h2 class="works-title">';
+						//the_title();
+						//echo '</h2>';
+						//echo '<p>';
+						//the_content();
+						//echo '</p>';
+						//echo '</aside>';
+						echo '</a>';
+						echo '</div>';
+
+					}
+					echo '</div>';					
+				}
+				
+				/* Restore original Post Data */
+				wp_reset_postdata();
+				?>
+				<div class="section-footer">
+					<h4>Check out all my projects on <a href="http://github.com/ckschmieder">Github</a><h4>					
+				</div>
 			</div><!-- .indent -->
 		</section>
 <!-- END Works -->
@@ -163,6 +219,49 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			</div><!-- .indent -->
 		</section>
 <!-- END Contact -->
+
+<!-- Test -->
+		<section id="test" class="lander-section">
+			<div class="container-fluid">
+				<div class="hover-tile-outer">
+				  <div class="hover-tile-container">
+				    <div class="hover-tile hover-tile-visible"></div>
+				    <div class="hover-tile hover-tile-hidden">
+				      <h4>Island Embroidery</h4>
+				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+				    </div>
+				  </div>
+				</div>
+				<div class="hover-tile-outer">
+				  <div class="hover-tile-container">
+				    <div class="hover-tile hover-tile-visible"></div>
+				    <div class="hover-tile hover-tile-hidden">
+				      <h4>Island Embroidery</h4>
+				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+				    </div>
+				  </div>
+				</div>
+				<div class="hover-tile-outer">
+				  <div class="hover-tile-container">
+				    <div class="hover-tile hover-tile-visible"></div>
+				    <div class="hover-tile hover-tile-hidden">
+				      <h4>Island Embroidery</h4>
+				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+				    </div>
+				  </div>
+				</div>
+				<div class="hover-tile-outer">
+				  <div class="hover-tile-container">
+				    <div class="hover-tile hover-tile-visible"></div>
+				    <div class="hover-tile hover-tile-hidden">
+				      <h4>Island Embroidery</h4>
+				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</section>
+<!-- END Test -->
 		
 
 	</main><!-- #main -->

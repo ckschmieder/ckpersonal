@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+.hover-tile-outer {
+  background: url("http://localhost/wordpress/wp-content/uploads/2016/02/IslandEmbroidery_screenshot2-1024x647.jpg");
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  height: 20em;
+  margin-bottom: 1.5em;
+}
+@media screen and (min-width: 40em) {
+  .hover-tile-outer {
+    width: 50%;
+  }
+}
+.hover-tile-outer .hover-tile-container {
+  height: 20em;
+  overflow: hidden;
+}
+.hover-tile-outer .hover-tile-container:hover > .hover-tile {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+.hover-tile-outer .hover-tile {
+  -webkit-transition: all, 0.2s ease-in-out;
+  -moz-transition: all, 0.2s ease-in-out;
+  transition: all, 0.2s ease-in-out;
+  background: inherit;
+  color: white;
+  height: inherit;
+  overflow: hidden;
+  padding: 1.5em;
+}
+.hover-tile-outer .hover-tile-hidden {
+  background: rgba(0, 0, 0, 0.5);
+}
+.hover-tile-outer .hover-tile-hidden p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5em;
+}
+.hover-tile-outer .hover-tile-hidden h4 {
+  margin: 0 0 0.5em 0;
+}
