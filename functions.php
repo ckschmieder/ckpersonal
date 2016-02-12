@@ -42,6 +42,9 @@ function ckpersonal_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 828, 360, true );
+	add_image_size( 'lander-thumb-lg', 1400, 1000 );
+	add_image_size( 'lander-thumb-md', 700, 500 );
+	add_image_size( 'lander-thumb-sm', 420, 300 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -118,14 +121,13 @@ function ckpersonal_scripts() {
 	wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/css/bootstrap.css');
 	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_uri() );
 
-	// Load stylesheet and scripts for the front-page only when on the front page
-	if ( is_front_page() ) {
-		wp_enqueue_style( 'front-page-styles', get_stylesheet_directory_uri() . '/style-front-page.css');
-		wp_enqueue_script( 'front-page-script', get_stylesheet_directory_uri() . '/js/frontpagescripts.js', array('jquery'), '20151117');
-	}
+	// Load stylesheet and scripts for the front-page only when on the front page	
+	wp_enqueue_style( 'front-page-styles', get_stylesheet_directory_uri() . '/style-front-page.css');
+	
+	
 
 	// Add Google Fonts: Fira Sans, Merriweather, and Rubik 
-	wp_enqueue_style( 'ckpersonal-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,700,400italic,700italic|Rubik:400,400italic,700,700italic' );
+	wp_enqueue_style( 'ckpersonal-google-fonts', 'https://fonts.googleapis.com/css?family=Muli:400,300|Fira+Sans:400,400italic,700,700italic|Merriweather:400,700,400italic,700italic|Rubik:400,400italic,700,700italic' );
 	wp_enqueue_style( 'ckpersonal-google-fonts-hand', 'https://fonts.googleapis.com/css?family=Just+Another+Hand|Architects+Daughter|Schoolbell|Sue+Ellen+Francisco|Indie+Flower|Covered+By+Your+Grace|Gochi+Hand|Neucha' );
 
 	// Add Font Awesome icons (http://fontawesome.io)
@@ -138,6 +140,8 @@ function ckpersonal_scripts() {
 	) );
 
 	wp_enqueue_script( 'ckpersonal-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'minified-script', get_template_directory_uri() . '/js/script.min.js', array('jquery'), '20151117');
+	wp_enqueue_script( 'my-scripts', get_template_directory_uri() . '/js/script.js', array('jquery'), '20151117');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

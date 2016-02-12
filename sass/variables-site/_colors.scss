@@ -1,4 +1,4 @@
-$color__background-body: #fff;
+$color__background-body: #000;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: transparent;
@@ -11,10 +11,10 @@ $color_background-white: #fff;
 $color__text-screen: #21759b;
 $color__text-input: #FCFCFC;
 $color__text-input-focus: #FCFCFC;
-$color__link: #000;
-$color__link-visited: #000;
-$color__link-hover: #000;
-$color__text-main: #000;
+$color__link: #fff;
+$color__link-visited: #fff;
+$color__link-hover: #fff;
+$color__text-main: #fff;
 
 $color_text-back: #000;
 $color_text-white: #fff;
@@ -30,7 +30,8 @@ $color__border-abbr: #666;
 
 // My colors according to section
 
-$color_headings: #22a38a;
+$color_headings: #fff;
+$color_section_title: #22A39F;
 
 $color_nav_white: #fff;
 $color_nav_black: #000;

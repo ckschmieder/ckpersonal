@@ -54,7 +54,7 @@
 }
 
 .content-area {
-    background: #F3EFE0;
+    background: transparent;
 
     h4 {
         font-size: 1.5rem;
@@ -67,8 +67,7 @@
 
 .section-title {
     color: #22A39F;
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
+    // font-size: 2.5rem;
     margin-bottom: 0;
     border-bottom: 2px solid #F3EFE0;
 }
@@ -80,7 +79,7 @@
     }
 
     .section-title {
-        font-size: 3rem;
+        // font-size: 3rem;
     }
 }
 
@@ -97,6 +96,20 @@
 /*--------------------------------------------------------------
 # Jumbotron
 --------------------------------------------------------------*/
+
+.fullheight {
+    display: flex;
+    align-items: center;
+
+    h4 {
+        text-align: center;
+    }
+}
+
+.row.flex-container {
+    display: flex;
+    align-items: center;
+}
 
 #jumbotron {
     //display: none; // Section will be removed if unused
@@ -115,21 +128,22 @@
     // display: flex;
     align-items: center;
     background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
+    
+    .wrap{
+        max-width: 600px;
+        margin:150px auto;
+    }
 
-    .container {
-        float: left;
-        margin-bottom: 7rem;
-        text-align: left;
+    .type-wrap{
+        margin:10px auto;
+        padding:20px;
+        background:#f0f0f0;
+        border-radius:5px;
+        border:#CCC 1px solid;
+    }  
 
-        h1, h2, h3, h4, p {
-        color: #F2F2F2;        
-        font-family: 'Schoolbell', cursive;
-        }
 
-        h1 {font-size: 2.5rem;}
-        p {font-size: 1rem;}
-
-    }    
+  
 }
 
 @media screen and (min-width: 360px) {
@@ -256,12 +270,20 @@
 /*--------------------------------------------------------------
 # Works
 --------------------------------------------------------------*/
-
-
 #works {
-    background: #F2F2F2;
-    background: hsl(0, 0%, 95%);
+
+
+    background: #000;
+    background: hsl(0, 0%, 0%);
+
+    .project.row {
+        margin-bottom: 30px;
+    }
+    .works-title {
+        margin-top: 0.5rem;
+    }
 }
+
 
 .cards {
     display: block;
@@ -332,144 +354,55 @@
     background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
     background-size: cover;
 
-    h2, h4, p {
-	    color: #FCFCFC;
-        color: hsl(0, 0%, 95%);
-    }
-
     .wpcf7 {
+
         background-color: transparent;
-        color: white;
-        line-height: 2;
-    
-        .wpcf7-text,
-        .wpcf7-textarea {
-            color: white;
-            line-height: 2;
+        margin-top: 2rem;
+
+        h2, h4, p {
+            color: #FCFCFC;
+            color: hsl(0, 0%, 95%);
+        } 
+
+        input[type="text"],
+        input[type="email"],
+        textarea
+        {
+            height: 2.5rem;
             background-color: transparent;
-            border: 1px solid rgba(156, 156, 156, 0.75);
+            color: #fff;
+            line-height: 2;
+        }  
+        textarea {
+            height: 10rem;
         }
     }
 
-    
-
 }
 
+@media screen and (min-width: 45em) {
+    
+    #contact {
 
-/* 
-#contact .wpcf7 {
-    margin: 2rem 0 0 0;
-    padding: 0;
+        .wpcf7 {
 
-    input {
-    background-color: transparent;
-    color: #FCFCFC;
-    border: 1px solid rgba(156, 156, 156, 0.75);
-    line-height: 2.5;
+            margin-top: 3rem;
+
+            input[type="text"],
+            input[type="email"] {
+                height: 3rem;
+            }
+            textarea {
+                height: 14rem;
+            }
+        }
     }
 }
 
-
-input:focus,
-input:active {
-    color: #FCFCFC;
-}
-textarea {
-    background-color: transparent;
-    color: #FCFCFC;
-    border: 1px solid rgba(156, 156, 156, 0.75);
-    line-height: 2.5;
-}
-textarea:focus,
-textarea:active {
-    color: #FCFCFC;
-}
-
-.wpcf7
-{
-    background-color: #f7f7f7;
-    border: 2px solid #0f0;
-} */
-
-
 /*--------------------------------------------------------------
-# Text Animation
+# Typed.js
 --------------------------------------------------------------*/
 
 .jumbotron {
-    h1 {
-      /* color: lime; 
-      font-family: "Courier";
-      font-size: 36px;
-      margin: 10px 0 0 10px; */
-      white-space: nowrap;
-      overflow: hidden;
-      width: 120px;
-      animation: type 1.2s steps(20, end); 
-    }
 
-    h1:nth-child(2){
-        width: 80vw;
-        animation: type2 4.8s steps(40, end);
-    }
-
-
-    /* h2 a{
-      color: lime;
-      text-decoration: none;
-    } */
-
-    p {
-        /* color: #FCFCFC; 
-        font-family: "";
-        font-size: 20px;
-        margin: 10px 0 0 10px; */
-        white-space: nowrap;
-        overflow: hidden;
-        // width: 320px;
-        animation: type 4s steps(60, end); 
-    }
-
-    p:nth-child(2) {
-        animation: type2 8s steps(60, end);
-    }
-
-    p:nth-child(3) {
-        width: 80vw;
-        animation: type2 9s steps(60, end);
-    }
-    p:nth-child(4) {
-        width: 80vw;
-        animation: type2 12s steps(60, end);
-    }
-    p:nth-child(5) {
-        width: 80vw;
-        animation: type2 16s steps(60, end);
-    }
 }
-/* .text-animated a{
-  color: lime;
-  text-decoration: none;
-} */
-
-/* span.cursor-stop{
-  animation: blink 1s infinite;
-} */
-
-@keyframes type{ 
-  from { width: 0; } 
-} 
-
-@keyframes type2{
-  0%{width: 0;}
-  50%{width: 0;}
-  100%{ width: 100; } 
-} 
-
-@keyframes blink{
-  to{opacity: .0;}
-}
-
-/* ::selection{
-  background: yellow;
-} */

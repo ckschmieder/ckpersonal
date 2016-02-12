@@ -13,12 +13,34 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <!-- Jumbotron -->
 		<section id="jumbotron" class="lander-section">
-			<div class="jumbotron">
-		      <div class="container">
-		        <h1>Hi!</h1>
-		        <h1>I'm Chris...</h1>
-		        <p>a "developing" web developer.<br></br>Scroll ↓ to have a look around!</p>
-		      </div>
+			<div class="fullheight">
+
+				<div class="container">
+					<div class="row flex-container">
+
+					<?php if ( has_header_image() ) { ?>
+						<div class="col-md-4"><img src="<?php echo( get_header_image() ); ?>"/></div>
+					<?php } ?>
+						
+						<div class="col-md-8 <?php if (!( get_header_image() )) {echo 'col-md-offset-2';} ?>">
+							<p>Placeholder text in an 8 col wide h1 element. If a header image is set, this should be aligned right. If no header image exists, this shoud be centered with 2 col on either side.</p>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h4>placeholder text in a 12 col wide h4 element</h4>
+						</div>
+
+					</div>
+				</div>
+
+		      <!-- <div class="wrap">
+			      <div class="type-wrap">
+
+			      	<span id="typed" style="white-space:pre;"></span>
+			      </div>		        
+		      </div> -->
 		    </div>
 		</section>
 <!-- END Jumbotron -->
@@ -101,16 +123,19 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				// The Loop
 				if ( $works_query->have_posts() ) {
 					
-					echo '<div class="cards">';
+					echo '<div class="pointless-wrap">';
 					while ( $works_query->have_posts() ) {
 						$works_query->the_post();
 
-						echo '<div class="card">';
+						echo '<div class="project row">';
+						echo '<figure class="work-thumb col-xs-12 col-sm-4">';
 						echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
-						echo '<figure class="work-thumb">';
-						the_post_thumbnail( 'large','style=width:100%;max-width:100%;height:auto;');
+						
+						the_post_thumbnail( 'lander-thumb-sm','style=width:100%;max-width:100%;height:auto;');
+						
+						echo '</a>';
 						echo '</figure>';
-						echo '<aside class="card-content">';
+						echo '<aside class="work-content col-xs-12 col-sm-8">';
 						echo '<h2 class="works-title">';
 						the_title();
 						echo '</h2>';
@@ -118,7 +143,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						the_content();
 						echo '</p>';
 						echo '</aside>';
-						echo '</a>';
+						
 						echo '</div>';
 
 					}
@@ -170,7 +195,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						echo '<div class="my-project col-sm-6">';
 						echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
 						echo '<figure class="work-img">';
-						the_post_thumbnail( 'large','style=width:100%;max-width:100%;height:auto;');
+						the_post_thumbnail( 'lander-thumb-lg','style=width:100%;max-width:100%;height:auto;');
 						echo '</figure>';
 						//echo '<aside class="card-content">';
 						//echo '<h2 class="works-title">';
