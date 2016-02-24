@@ -207,10 +207,10 @@ html {
 # Profile
 --------------------------------------------------------------*/
 #profile {
-  color: black;
-  color: black;
+  /* color: black;
+  color:  hsl(0, 0%, 0%);
   background: #F2F2F2;
-  background: #f2f2f2;
+  background: hsl(0, 0%, 95%); */
 }
 #profile .entry-content {
   display: -webkit-box;
@@ -301,9 +301,6 @@ html {
 /*--------------------------------------------------------------
 # Competencies
 --------------------------------------------------------------*/
-#competencies {
-  background-color: #F3EFE0;
-}
 #competencies ul {
   list-style: none;
   padding-left: 0;
