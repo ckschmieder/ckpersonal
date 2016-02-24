@@ -863,11 +863,6 @@ a:hover, a:active {
   }
 }
 /* Hovering menu */
-/* .nav-menu {
-	padding: 1em;
-	margin-bottom: 3em;
-	background-color: #000;
-} */
 .main-navigation.toggled {
   position: fixed;
   bottom: 0;
@@ -876,8 +871,9 @@ a:hover, a:active {
 }
 .main-navigation.toggled .nav-menu {
   padding: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
   background-color: #000;
+  border: 1px solid #208683;
 }
 
 .main-navigation.toggled ul {
