@@ -16,15 +16,15 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			<div class="fullheight">
 
 				<div class="container">
-					<div class="row flex-container">
+					<div class="row">
+
+					<div class="col-md-5 col-xs-8 <?php if (!( get_header_image() )) {echo 'col-md-offset-2';} ?>">
+						<p>Placeholder text in an 8 col wide h1 element. If a header image is set, this should be aligned right. If no header image exists, this shoud be centered with 2 col on either side.</p>
+					</div>
 
 					<?php if ( has_header_image() ) { ?>
-						<div class="col-md-4"><img src="<?php echo( get_header_image() ); ?>"/></div>
+						<div class="col-md-4 col-xs-8 col-xs-offset-2 col-md-offset-0 header-img"><img src="<?php echo( get_header_image() ); ?>"/></div>
 					<?php } ?>
-						
-						<div class="col-md-8 <?php if (!( get_header_image() )) {echo 'col-md-offset-2';} ?>">
-							<p>Placeholder text in an 8 col wide h1 element. If a header image is set, this should be aligned right. If no header image exists, this shoud be centered with 2 col on either side.</p>
-						</div>
 
 					</div>
 					<div class="row">

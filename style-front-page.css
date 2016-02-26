@@ -115,7 +115,7 @@ html {
 }
 
 .section-title {
-  color: #22A39F;
+  color: #70DC9E;
   margin-bottom: 0;
   border-bottom: 2px solid #F3EFE0;
 }
@@ -162,9 +162,16 @@ html {
 #jumbotron {
   padding: 0;
   margin: 0;
+  background: url("images/empty-room-green.jpg") 50% 0%;
 }
 
-.jumbotron {
+@media screen and (max-width: 991px) {
+  .header-image {
+    margin: 0 auto;
+    float: none;
+  }
+}
+#jumbotron {
   padding: 0;
   margin: 0;
   width: 100vw;
@@ -173,13 +180,12 @@ html {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
 }
-.jumbotron .wrap {
+#jumbotron .wrap {
   max-width: 600px;
   margin: 150px auto;
 }
-.jumbotron .type-wrap {
+#jumbotron .type-wrap {
   margin: 10px auto;
   padding: 20px;
   background: #f0f0f0;
