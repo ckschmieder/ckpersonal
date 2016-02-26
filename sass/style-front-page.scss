@@ -117,23 +117,33 @@
     //background: hsl(0, 0%, 70%);
     padding: 0;
     margin: 0;
-    background: url("images/empty-room-green.jpg") 50% 80%;
-    background-size: cover;
+    background-color: black; 
+    //background: url("images/empty-room-green.jpg") 50% 80%;
+    //background-size: cover;
 }
 
 
 @media screen and (max-width: 991px) {
     .header-image {
         margin: 0 auto;
-        float: none;
+        float: none;       
+    }
+    #cartoon-me {
+        max-width: 60%;
+        display: block;
+        margin: 0 auto;
+    }
+    #story {
+        // padding: 0 20px;
+        font-size: .8em;
     }
 }
 
 #jumbotron {
     padding: 0;
-    color: black;
-    font-family: courier;
-    font-weight: bold;
+    color: white;
+    font-family: 'Source Code Pro', courier;
+    // font-weight: bold;
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -152,12 +162,12 @@
         background:#f0f0f0;
         border-radius:5px;
         border:#CCC 1px solid;
-    }  
+    } 
 
-    .cartoon {
-        padding-top: 120px;
+    #story {
+        font-size: .8em;
+        line-height: .8em;
     }
-
 
   
 }
@@ -176,6 +186,27 @@
     }
 }
 
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 
 /*--------------------------------------------------------------
 # Profile

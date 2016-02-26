@@ -162,8 +162,7 @@ html {
 #jumbotron {
   padding: 0;
   margin: 0;
-  background: url("images/empty-room-green.jpg") 50% 80%;
-  background-size: cover;
+  background-color: black;
 }
 
 @media screen and (max-width: 991px) {
@@ -171,12 +170,21 @@ html {
     margin: 0 auto;
     float: none;
   }
+
+  #cartoon-me {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #story {
+    font-size: .8em;
+  }
 }
 #jumbotron {
   padding: 0;
-  color: black;
-  font-family: courier;
-  font-weight: bold;
+  color: white;
+  font-family: 'Source Code Pro', courier;
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -196,8 +204,9 @@ html {
   border-radius: 5px;
   border: #CCC 1px solid;
 }
-#jumbotron .cartoon {
-  padding-top: 120px;
+#jumbotron #story {
+  font-size: .8em;
+  line-height: .8em;
 }
 
 @media screen and (min-width: 360px) {
@@ -214,6 +223,34 @@ html {
   }
   .jumbotron .container p {
     font-size: 1.5rem;
+  }
+}
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*--------------------------------------------------------------

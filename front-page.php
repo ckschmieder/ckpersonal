@@ -15,25 +15,61 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 		<section id="jumbotron" class="lander-section">
 			<div class="fullheight">
 
-				<div class="container cartoon">
-					<div class="row">
+				
 
-					<div class="col-md-5 col-xs-8 <?php if (!( get_header_image() )) {echo 'col-md-offset-2';} ?>">
-						<p>Oh, Hi! I'm Chris. Thanks for stopping by. The site isn't quite finished yet, but feel free to have a look around. Just remember to check back soon.. I'm working on some cool stuff here!</p>
+					<script type="text/javascript">
+						$(function(){
+							var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				            var dayOfWeekIndex = (new Date()).getDay();
+				            var dayOfWeek = weekdays[dayOfWeekIndex];
+				            var dayOfWeekPastIndex = Math.floor(weekdays.length * Math.random());
+				            var dayOfWeekPast;
+				            var hourOfDay = new Date().getHours();
+				            var timeOfDay;
+				            // choose day of week other than current one
+				            if (dayOfWeekPastIndex == dayOfWeekIndex) {
+				              dayOfWeekPast = weekdays[(dayOfWeekPastIndex + 1) % weekdays.length];
+				            } else {
+				              dayOfWeekPast = weekdays[dayOfWeekPastIndex];
+				            }
+				            // assign time of day to the hour
+				            if ((hourOfDay >= 4) && (hourOfDay <= 11)) {
+				              timeOfDay = "morning";
+				            } else if ((hourOfDay >= 12) && (hourOfDay <= 16)) {
+				              timeOfDay = "afternoon";
+				            } else { 
+				              timeOfDay = "evening";
+				            }
+				            // make conversation
+				            $('#story').typed({
+				                strings: ["Oh hey...^1500 \nYou're a bit early. ^1000 \n<br>The site isn't quite finished,^200 but since you're here you might as well scroll down and check out what I've done so far. ^2000 \n<br>I know it may not look like much right now,^200 but this place is going to be pretty <em>sweet</em> when I'm finished!"],
+				                typeSpeed: 20,
+				                backDelay: 1500,
+				                loop: false,
+				                loopCount: false,
+				            });
+				            
+				        });
+					</script>
+			<div class="container cartoon">
+				<div class="row">
+					
+					<div class="col-md-8 col-xs-12 <?php if (!( get_header_image() )) {echo 'col-md-offset-2';} ?>">
+						<span id="story" style="white-space:pre-line"></span>
 					</div>
 
 					<?php if ( has_header_image() ) { ?>
-						<div class="col-md-4 col-xs-8 col-xs-offset-2 col-md-offset-0 header-img"><img src="<?php echo( get_header_image() ); ?>"/></div>
+						<div class="col-md-4 col-xs-12 header-img"><img id="cartoon-me" src="<?php echo( get_header_image() ); ?>"/></div>
 					<?php } ?>
 
-					</div>
+				</div>
 					<!-- <div class="row">
 						<div class="col-md-12">
 							<h4>placeholder text in a 12 col wide h4 element</h4>
 						</div>
 
 					</div> -->
-				</div>
+			</div>
 
 		      <!-- <div class="wrap">
 			      <div class="type-wrap">
