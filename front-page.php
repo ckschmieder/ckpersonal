@@ -25,6 +25,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				            var dayOfWeekPastIndex = Math.floor(weekdays.length * Math.random());
 				            var dayOfWeekPast;
 				            var hourOfDay = new Date().getHours();
+				            /*var yourCity = $clientInfo['city'];*/
 				            var timeOfDay;
 				            // choose day of week other than current one
 				            if (dayOfWeekPastIndex == dayOfWeekIndex) {
@@ -40,6 +41,8 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				            } else { 
 				              timeOfDay = "evening";
 				            }
+
+
 				            // make conversation
 				            $('#story').typed({
 				                strings: ["Oh hey...^1500 \nYou're a bit early. ^1000 \n<br>The site isn't quite finished,^200 but since you're here you might as well scroll down and check out what I've done so far. ^2000 \n<br>I know it may not look like much right now,^200 but this place is going to be pretty <em>sweet</em> when I'm finished!"],
@@ -69,6 +72,36 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						</div>
 
 					</div> -->
+					
+<?php
+function getClientIPInfo($ip = null) {
+	if (!$ip) {
+		$ip = get_ip();
+
+	}
+    $json_data = file_get_contents('http://ipinfo.io/'.$ip.'/json');
+    $data = json_decode($json_data, true);
+    return $data;
+}
+$clientInfo = getClientIPInfo();
+//echo $clientInfo ['region'];
+echo $clientInfo['city'];
+var_dump($clientInfo);
+?>
+
+
+<?php
+
+function get_ip(){
+$externalContent = @file_get_contents( 'http://checkip.dyndns.com/', 0, $timeout_setting );
+preg_match( '/\b(?:\d{1,3}\.){3}\d{1,3}\b/', $externalContent, $m );
+if ($externalContent) {return $m[0];}
+return '';
+}?>
+
+
+
+
 			</div>
 
 		      <!-- <div class="wrap">
