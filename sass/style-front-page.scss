@@ -117,7 +117,8 @@
     //background: hsl(0, 0%, 70%);
     padding: 0;
     margin: 0;
-    background: url("images/empty-room-green.jpg") 50% 0%;
+    background: url("images/empty-room-green.jpg") 50% 80%;
+    background-size: cover;
 }
 
 
@@ -130,6 +131,9 @@
 
 #jumbotron {
     padding: 0;
+    color: black;
+    font-family: courier;
+    font-style: bold;
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -149,6 +153,10 @@
         border-radius:5px;
         border:#CCC 1px solid;
     }  
+
+    .cartoon {
+        padding-top: 120px;
+    }
 
 
   

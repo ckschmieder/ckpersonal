@@ -15,11 +15,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 		<section id="jumbotron" class="lander-section">
 			<div class="fullheight">
 
-				<div class="container">
+				<div class="container cartoon">
 					<div class="row">
 
 					<div class="col-md-5 col-xs-8 <?php if (!( get_header_image() )) {echo 'col-md-offset-2';} ?>">
-						<p>Placeholder text in an 8 col wide h1 element. If a header image is set, this should be aligned right. If no header image exists, this shoud be centered with 2 col on either side.</p>
+						<p>Oh, Hi! I'm Chris. Thanks for stopping by. The site isn't quite finished yet, but feel free to have a look around. Just remember to check back soon.. I'm working on some cool stuff here!</p>
 					</div>
 
 					<?php if ( has_header_image() ) { ?>
@@ -27,12 +27,12 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 					<?php } ?>
 
 					</div>
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-md-12">
 							<h4>placeholder text in a 12 col wide h4 element</h4>
 						</div>
 
-					</div>
+					</div> -->
 				</div>
 
 		      <!-- <div class="wrap">
