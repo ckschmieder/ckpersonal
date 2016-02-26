@@ -73,33 +73,6 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 					</div> -->
 					
-<?php
-function getClientIPInfo($ip = null) {
-	if (!$ip) {
-		$ip = get_ip();
-
-	}
-    $json_data = file_get_contents('http://ipinfo.io/'.$ip.'/json');
-    $data = json_decode($json_data, true);
-    return $data;
-}
-$clientInfo = getClientIPInfo();
-//echo $clientInfo ['region'];
-echo $clientInfo['city'];
-var_dump($clientInfo);
-?>
-
-
-<?php
-
-function get_ip(){
-$externalContent = @file_get_contents( 'http://checkip.dyndns.com/', 0, $timeout_setting );
-preg_match( '/\b(?:\d{1,3}\.){3}\d{1,3}\b/', $externalContent, $m );
-if ($externalContent) {return $m[0];}
-return '';
-}?>
-
-
 
 
 			</div>
