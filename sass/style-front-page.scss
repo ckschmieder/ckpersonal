@@ -62,14 +62,19 @@
 }
 
  .lander-section {
-    padding: 1rem 0;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    background-image: url("images/bg-dark.jpg");
+
  }
 
 .section-title {
     color: #70DC9E;
-    // font-size: 2.5rem;
     margin-bottom: 0;
+    margin: 1rem -1rem;
+    padding: 0 10px;
     border-bottom: 2px solid #F3EFE0;
+    background-color: rgba(0,0,0,0.35);
 }
 
 @media screen and (min-width: 760px) {
@@ -88,9 +93,6 @@
         margin: 0 auto;
     }
 }
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -247,9 +249,7 @@
     }
 }
 
-#profile h2.section-title {
-    text-align: center;
-}
+
 @media screen and (min-width: 760px) {
     #profile .entry-content {
         flex-direction: row;
@@ -319,15 +319,21 @@
 --------------------------------------------------------------*/
 #works {
 
-
-    background: #000;
-    background: hsl(0, 0%, 0%);
-
     .project.row {
         margin-bottom: 30px;
+        border-bottom: 3px dotted #70DC9E;
+        padding: 1em 0;
+        margin: 1em 0;
     }
+
+    .project.row:last-child {
+        border-bottom: none;
+    }
+
     .works-title {
         margin-top: 0.5rem;
+        color: #FF5475;
+        font-weight: bold;
     }
 }
 
@@ -398,13 +404,10 @@
 
 #contact {
 
-    background-image: url("http://ckschmieder.com/wp-content/uploads/2016/02/background-blackboard.jpg");
-    background-size: cover;
-
     .wpcf7 {
 
         background-color: transparent;
-        margin-top: 2rem;
+        margin-top: 1rem;
 
         h2, h4, p {
             color: #FCFCFC;

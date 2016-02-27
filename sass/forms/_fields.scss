@@ -19,6 +19,7 @@ textarea {
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
 	margin-top: 5px;
+	width: 100%;
 
 	&:focus {
 		color: $color__text-input-focus;
@@ -44,12 +45,13 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-	max-width: 95%;
+	max-width: 100%;
 	padding: 0 7px;
+	width: 100%;
 }
 
 textarea {
 	padding: 7px;
-	width: 95%;
+	width: 100%;
 	margin-top: 5px;
 }

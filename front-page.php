@@ -12,7 +12,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 	<main id="main" class="site-main lander-main" role="main">
 
 <!-- Jumbotron -->
-		<section id="jumbotron" class="lander-section">
+		<section id="jumbotron" class="">
 			<div class="fullheight">
 
 				
@@ -266,7 +266,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <!-- Contact -->
 		<section id="contact" class="lander-section">
-			<div class="indent clear">			
+			<div class="container">			
 				<?php 
 				$query = new WP_Query( 'pagename=contact' );
 				// The Loop
@@ -285,50 +285,6 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			</div><!-- .indent -->
 		</section>
 <!-- END Contact -->
-
-<!-- Test -->
-		<section id="test" class="lander-section">
-			<div class="container-fluid">
-				<div class="hover-tile-outer">
-				  <div class="hover-tile-container">
-				    <div class="hover-tile hover-tile-visible"></div>
-				    <div class="hover-tile hover-tile-hidden">
-				      <h4>Island Embroidery</h4>
-				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-				    </div>
-				  </div>
-				</div>
-				<div class="hover-tile-outer">
-				  <div class="hover-tile-container">
-				    <div class="hover-tile hover-tile-visible"></div>
-				    <div class="hover-tile hover-tile-hidden">
-				      <h4>Island Embroidery</h4>
-				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-				    </div>
-				  </div>
-				</div>
-				<div class="hover-tile-outer">
-				  <div class="hover-tile-container">
-				    <div class="hover-tile hover-tile-visible"></div>
-				    <div class="hover-tile hover-tile-hidden">
-				      <h4>Island Embroidery</h4>
-				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-				    </div>
-				  </div>
-				</div>
-				<div class="hover-tile-outer">
-				  <div class="hover-tile-container">
-				    <div class="hover-tile hover-tile-visible"></div>
-				    <div class="hover-tile hover-tile-hidden">
-				      <h4>Island Embroidery</h4>
-				      <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-				    </div>
-				  </div>
-				</div>
-			</div>
-		</section>
-<!-- END Test -->
-		
 
 	</main><!-- #main -->
 </div><!-- #primary -->
