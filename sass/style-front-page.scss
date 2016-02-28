@@ -94,6 +94,9 @@
     }
 }
 
+.pointless-wrap {
+    margin: 0 -15px;
+}
 
 /*--------------------------------------------------------------
 # Jumbotron
@@ -295,8 +298,7 @@
 
         li {
             display: inline-block;
-            font-family: sans-serif;
-            padding: .2em;
+            // font-family: sans-serif;            
         }
     }
 

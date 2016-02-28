@@ -23,3 +23,40 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+.tech,
+.tools,
+.skills {
+    display: flex;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    flex-wrap: wrap;
+
+    // Applies to the list of tools / tech used, found on each 'Works' page.
+	li {
+		padding: 0px 6px 0px 6px;
+	    background-color: rgba(255, 255, 255, 0.3);
+	    color: #1c1c1c;
+	    display: inline-block;
+	    margin-right: 4px;
+	    margin-bottom: 11px;
+	    font-family: "futura-pt", futura, helvetica, arial, sans-serif;
+	    font-size: .9rem;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    line-height: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.tech,
+	.tools,
+	.skills {
+		li {
+			padding: 0px 5px 0px 5px;   
+		    line-height: 1.8em;
+		}
+	}	
+}
+ 

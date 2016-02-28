@@ -115,7 +115,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <!-- Competencies -->
 		<section id="competencies" class="lander-section">
-			<div class="indent clear">
+			<div class="container">
 				<?php 
 				$query = new WP_Query( 'pagename=competencies' );
 				// The Loop

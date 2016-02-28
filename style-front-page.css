@@ -136,6 +136,10 @@ html {
     margin: 0 auto;
   }
 }
+.pointless-wrap {
+  margin: 0 -15px;
+}
+
 /*--------------------------------------------------------------
 # Jumbotron
 --------------------------------------------------------------*/
@@ -359,8 +363,6 @@ html {
 }
 #competencies ul li {
   display: inline-block;
-  font-family: sans-serif;
-  padding: .2em;
 }
 #competencies .using {
   float: left;

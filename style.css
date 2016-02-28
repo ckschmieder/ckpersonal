@@ -328,7 +328,7 @@ h6 {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 dfn, cite, em, i {
@@ -412,8 +412,8 @@ big {
 }
 @media screen and (min-width: 40em) {
   .site-main {
-    font-size: 19.2px;
-    font-size: 1.2rem;
+    font-size: 17.6px;
+    font-size: 1.1rem;
   }
 
   .section-title {
@@ -423,8 +423,8 @@ big {
 }
 @media screen and (min-width: 57em) {
   .site-main {
-    font-size: 20.8px;
-    font-size: 1.3rem;
+    font-size: 19.2px;
+    font-size: 1.2rem;
     max-width: 45em;
     margin: 1.8em auto;
   }
@@ -516,6 +516,39 @@ dd {
   margin: 0 1.5em 1.5em;
 }
 
+.tech,
+.tools,
+.skills {
+  display: flex;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+.tech li,
+.tools li,
+.skills li {
+  padding: 0px 6px 0px 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #1c1c1c;
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 11px;
+  font-family: "futura-pt", futura, helvetica, arial, sans-serif;
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  .tech li,
+  .tools li,
+  .skills li {
+    padding: 0px 5px 0px 5px;
+    line-height: 1.8em;
+  }
+}
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
