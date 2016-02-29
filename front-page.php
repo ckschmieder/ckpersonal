@@ -170,14 +170,14 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						$works_query->the_post();
 
 						echo '<div class="project row">';
-						echo '<figure class="work-thumb col-xs-12 col-sm-4">';
+						echo '<figure class="work-thumb col-xs-12 col-sm-6">';
 						echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
 						
 						the_post_thumbnail( 'lander-thumb-sm','style=width:100%;max-width:100%;height:auto;');
 						
 						echo '</a>';
 						echo '</figure>';
-						echo '<aside class="work-content col-xs-12 col-sm-8">';
+						echo '<aside class="work-content col-xs-12 col-sm-6">';
 						echo '<h2 class="works-title">';
 						the_title();
 						echo '</h2>';
@@ -196,70 +196,6 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				wp_reset_postdata();
 				?>				
 
-			</div><!-- .indent -->
-		</section>
-<!-- END Works -->
-
-<!-- Works -->
-		<section id="works2" class="lander-section">
-			<div class="container">
-				<?php 
-				$query = new WP_Query( 'pagename=works' );
-				$works_id = $query->queried_object->ID;				
-
-				// The Loop
-				if ( $query->have_posts() ) {
-					while ( $query->have_posts() ) {
-						$query->the_post();
-						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
-						echo '</div>';
-						echo '<div class="container-fluid">';
-						
-					}
-				}
-
-				/* Restore original Post Data */
-				wp_reset_postdata();
-
-				$args = array(
-					'post_type' => 'page',
-					'post_parent' => $works_id
-				);
-				$works_query = new WP_Query( $args );
-				
-				// The Loop
-				if ( $works_query->have_posts() ) {
-					
-					echo '<div class="row">';
-					while ( $works_query->have_posts() ) {
-						$works_query->the_post();
-
-						echo '<div class="my-project col-sm-6">';
-						echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
-						echo '<figure class="work-img">';
-						the_post_thumbnail( 'lander-thumb-lg','style=width:100%;max-width:100%;height:auto;');
-						echo '</figure>';
-						//echo '<aside class="card-content">';
-						//echo '<h2 class="works-title">';
-						//the_title();
-						//echo '</h2>';
-						//echo '<p>';
-						//the_content();
-						//echo '</p>';
-						//echo '</aside>';
-						echo '</a>';
-						echo '</div>';
-
-					}
-					echo '</div>';					
-				}
-				
-				/* Restore original Post Data */
-				wp_reset_postdata();
-				?>
-				<div class="section-footer">
-					<h4>Check out all my projects on <a href="http://github.com/ckschmieder">Github</a><h4>					
-				</div>
 			</div><!-- .indent -->
 		</section>
 <!-- END Works -->
