@@ -1,6 +1,6 @@
 /* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
 
-@import "tiles";
+@import "tiles"; 
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -102,6 +102,16 @@
 # Jumbotron
 --------------------------------------------------------------*/
 
+#jumbotron {
+    display: none; // Section will be removed if unused
+    //background: #c3c3c3;
+    //background: hsl(0, 0%, 70%);
+    padding: 0;
+    margin: 0;
+    background-image: url("images/cks-dev-office_1500x996.jpg");
+    //background: url("images/empty-room-green.jpg") 50% 80%;
+    background-size: cover;
+}
 .fullheight {
     display: flex;
     align-items: center;
@@ -116,16 +126,7 @@
     align-items: center;
 }
 
-#jumbotron {
-    //display: none; // Section will be removed if unused
-    //background: #c3c3c3;
-    //background: hsl(0, 0%, 70%);
-    padding: 0;
-    margin: 0;
-    background-color: black; 
-    //background: url("images/empty-room-green.jpg") 50% 80%;
-    //background-size: cover;
-}
+
 
 
 @media screen and (max-width: 991px) {

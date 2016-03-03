@@ -24,9 +24,10 @@ function ckpersonal_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'ckpersonal_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 595,
-		'height'                 => 709,
+		'width'                  => 1600,
+		'height'                 => 900,
 		'flex-height'            => true,
+		'flex-width'            => true,
 		'wp-head-callback'       => 'ckpersonal_header_style',
 	) ) );
 }

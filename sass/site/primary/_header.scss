@@ -2,15 +2,31 @@
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-	background-color: #000;
+	background-color: #ccc;
 	background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    .header-overlay {
+    	background-color: rgba(0, 0, 0, 0.8);
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    /* opacity: 0.75; */
+	    filter: alpha(opacity=75);
+	    z-index: 3;	    
+	} 
 }
 
+ 
 .site-logo {
-	position: relative;
+	position: absolute;
 
 	a {
-		position: absolute;
+		position: fixed;
 		z-index: 10;
 		top: 1em;
 		left: 1em;
@@ -44,11 +60,17 @@
 }
 
 .site-branding {
-	text-align: center;
+	text-align: center;	
+    position: relative;
+    margin: 0 auto;
+    padding: 220px 0 140px;
+    width: 100%;
+    flex: 1 0 auto;
+    max-width: 954px;
 }
 
 .site-title {
-	margin: 1.7em 1em 0;
+	margin: 1rem 0;
 	font-family: $font__headings;
 	@include font-size(2.4);
 	font-weight: bold;
@@ -77,14 +99,14 @@
 .site-title::after {
 	display: block;
 	content: "";
-	margin: .7em auto 0;
+	margin: .6em auto 0;
 	width: 3em;
 	border-bottom: solid 1px #fff;
 	opacity: .5;
 }
 
 .site-description {
-	margin: 2em 2em 3em;
+	margin: 1rem 0;
 	@include font-size(1.1);
 	color: #fff;
 }

@@ -143,6 +143,14 @@ html {
 /*--------------------------------------------------------------
 # Jumbotron
 --------------------------------------------------------------*/
+#jumbotron {
+  display: none;
+  padding: 0;
+  margin: 0;
+  background-image: url("images/cks-dev-office_1500x996.jpg");
+  background-size: cover;
+}
+
 .fullheight {
   display: -webkit-box;
   display: -webkit-flex;
@@ -166,12 +174,6 @@ html {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#jumbotron {
-  padding: 0;
-  margin: 0;
-  background-color: black;
 }
 
 @media screen and (max-width: 991px) {
