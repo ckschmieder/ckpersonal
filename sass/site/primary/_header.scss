@@ -7,23 +7,28 @@
     background-position: center left;
     background-repeat: no-repeat;
     height: 100vh;
-
-    .header-overlay {
-    	background-color: rgba(0, 0, 0, 0.8);
-	    position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-	    /* opacity: 0.75; */
-	    filter: alpha(opacity=75);
-	    z-index: 3;	    
-	} 
+    display: flex;
 }
 
- 
+.dimmed {
+  position: relative;
+}
+
+.dimmed:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .site-logo {
-	position: absolute;
+	position: relative;
+	z-index: 15;
 
 	a {
 		position: absolute;
@@ -60,29 +65,31 @@
 }
 
 .site-branding {
-	text-align: center;	
-    position: relative;
+	text-align: center;
     margin: 0 auto;
-    padding: 220px 0 140px;
-    width: 100%;
-    flex: 1 0 auto;
+    // padding: 220px 0 140px;
+    // width: 100%;
+    // flex: 1 0 auto;
     max-width: 954px;
+    align-self: center;
+    z-index: 15;
 }
 
 .site-title {
 	margin: 1rem 0;
 	font-family: $font__headings;
-	@include font-size(2.4);
+	@include font-size(2.8);
 	font-weight: bold;
 	line-height: 1.3em;
 	color: #fff;
 	text-transform: uppercase;
 	word-break: break-word;
+	width: 100%;
 }
 
 @media screen and (max-width: 30em) {
 	.site-title {
-		@include font-size(2);
+		@include font-size(1.8);
 	}
 }
 
@@ -106,7 +113,7 @@
 }
 
 .site-description {
-	margin: 1rem 0;
+	margin: .8rem 0;
 	@include font-size(1.1);
 	color: #fff;
 }

@@ -9,6 +9,7 @@
 	// float: left;
 	// width: 100%;
 	font-weight: 300;
+	z-index: 99;
 
 	ul {
 		display: none;		
@@ -219,7 +220,7 @@
 }
 
 .menu-toggle.hide {
-	bottom: -2.5em;
+	bottom: -2.0em;
 }
 
 /* Make sure the button doesn't hide when menu is open. */
@@ -347,12 +348,18 @@
 	}
 	
 	/* Add an outline on hovered and focused menu items */
-	.main-navigation a:hover,
 	.main-navigation a:focus {
 		background: transparent;
 		color: #fff;
 		text-decoration: underline;
 		outline: solid 1px #b3b3b3;
+	}
+
+	.main-navigation a:hover {
+		background: transparent;
+		color: #fff;
+		text-decoration: none;
+		outline: none;
 	}
 	
 	/* Create hover and focus contrast on drop-down items */

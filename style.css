@@ -724,6 +724,7 @@ a:hover, a:active {
   font-size: 16px;
   font-size: 1em;
   font-weight: 300;
+  z-index: 99;
 }
 .main-navigation ul {
   display: none;
@@ -889,7 +890,7 @@ a:hover, a:active {
 }
 
 .menu-toggle.hide {
-  bottom: -2.5em;
+  bottom: -2.0em;
 }
 
 /* Make sure the button doesn't hide when menu is open. */
@@ -1008,12 +1009,18 @@ a:hover, a:active {
   }
 
   /* Add an outline on hovered and focused menu items */
-  .main-navigation a:hover,
   .main-navigation a:focus {
     background: transparent;
     color: #fff;
     text-decoration: underline;
     outline: solid 1px #b3b3b3;
+  }
+
+  .main-navigation a:hover {
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
   }
 
   /* Create hover and focus contrast on drop-down items */
@@ -1492,21 +1499,28 @@ a:hover, a:active {
   background-position: center left;
   background-repeat: no-repeat;
   height: 100vh;
+  display: flex;
 }
-.site-header .header-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+
+.dimmed {
+  position: relative;
+}
+
+.dimmed:after {
+  content: " ";
+  z-index: 10;
+  display: block;
   position: absolute;
+  height: 100%;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  /* opacity: 0.75; */
-  filter: alpha(opacity=75);
-  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .site-logo {
-  position: absolute;
+  position: relative;
+  z-index: 15;
 }
 .site-logo a {
   position: absolute;
@@ -1543,30 +1557,29 @@ a:hover, a:active {
 
 .site-branding {
   text-align: center;
-  position: relative;
   margin: 0 auto;
-  padding: 220px 0 140px;
-  width: 100%;
-  flex: 1 0 auto;
   max-width: 954px;
+  align-self: center;
+  z-index: 15;
 }
 
 .site-title {
   margin: 1rem 0;
   font-family: "Muli", serif;
-  font-size: 38.4px;
-  font-size: 2.4rem;
+  font-size: 44.8px;
+  font-size: 2.8rem;
   font-weight: bold;
   line-height: 1.3em;
   color: #fff;
   text-transform: uppercase;
   word-break: break-word;
+  width: 100%;
 }
 
 @media screen and (max-width: 30em) {
   .site-title {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 28.8px;
+    font-size: 1.8rem;
   }
 }
 .site-title a {
@@ -1589,7 +1602,7 @@ a:hover, a:active {
 }
 
 .site-description {
-  margin: 1rem 0;
+  margin: .8rem 0;
   font-size: 17.6px;
   font-size: 1.1rem;
   color: #fff;

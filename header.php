@@ -25,11 +25,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ckpersonal' ); ?></a>
 
 	<?php if ( get_header_image() ) { ?>
-		<header id="masthead" class="site-header" style="background-image: url(<?php header_image(); ?>)" role="banner">
+		<header id="masthead" class="site-header dimmed" style="background-image: url(<?php header_image(); ?>)" role="banner">
 	<?php } else { ?>
 		<header id="masthead" class="site-header" role="banner">
 	<?php } ?>	
-		<div class="header-overlay">
+		
 			<?php // Display site icon or first letter as logo ?>	
 			<div class="site-logo">
 				<?php $site_title = get_bloginfo( 'name' ); ?> <!-- get site title -->
@@ -77,11 +77,9 @@
 				}
 				?>
 
-
-				<?php  ?>
+				<?php  ?> 
 
 			</nav><!-- #site-navigation -->
-			</div>
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
