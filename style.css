@@ -1509,7 +1509,7 @@ a:hover, a:active {
   position: absolute;
 }
 .site-logo a {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   top: 1em;
   left: 1em;
