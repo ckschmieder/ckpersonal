@@ -474,6 +474,7 @@ html {
 body {
   background: #000;
   /* Fallback for when there is no custom background color defined. */
+  position: relative;
 }
 
 blockquote, q {
@@ -1500,6 +1501,7 @@ a:hover, a:active {
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
+  z-index: 0;
 }
 
 .dimmed {

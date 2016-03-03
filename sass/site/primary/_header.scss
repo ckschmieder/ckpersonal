@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
+    z-index: 0;
 }
 
 .dimmed {
@@ -116,4 +117,4 @@
 	margin: .8rem 0;
 	@include font-size(1.1);
 	color: #fff;
-}
+} 

@@ -66,20 +66,7 @@
 				endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ckpersonal' ); ?></button>
-
-				<?php    
-				if (is_front_page()){
-					wp_nav_menu( array( 'menu' => 'Front Page Menu' ) );
-				} else {
-					wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu', ) );
-				}
-				?>
-
-				<?php  ?> 
-
-			</nav><!-- #site-navigation -->
+			
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
