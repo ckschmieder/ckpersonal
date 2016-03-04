@@ -128,7 +128,7 @@ function ckpersonal_scripts() {
 	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_uri() );
 
 	// Load stylesheet and scripts for the front-page only when on the front page	
-	wp_enqueue_style( 'front-page-styles', get_stylesheet_directory_uri() . '/style-front-page.css');
+	// wp_enqueue_style( 'front-page-styles', get_stylesheet_directory_uri() . '/style-front-page.css');
 	
 	
 

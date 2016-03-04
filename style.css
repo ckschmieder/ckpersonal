@@ -297,6 +297,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+.lander-page h3 {
+  color: #cfa144;
+}
+
+.lander-page h2.section-title {
+  color: #4472cf;
+}
+
 h1 {
   font-size: 38.4px;
   font-size: 2.4rem;
@@ -1463,10 +1471,12 @@ ul.nav-menu li a:hover {
   height: 100vh;
   display: flex;
   z-index: 0;
+  overflow: hidden;
 }
 
 .dimmed {
   position: relative;
+  overflow: hidden;
 }
 
 .dimmed:after {
@@ -1479,6 +1489,7 @@ ul.nav-menu li a:hover {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .site-logo {
@@ -1519,6 +1530,7 @@ ul.nav-menu li a:hover {
 }
 
 .site-branding {
+  position: relative;
   text-align: center;
   margin: 0 auto;
   max-width: 954px;
@@ -1527,6 +1539,7 @@ ul.nav-menu li a:hover {
   z-index: 15;
 }
 .site-branding .site-title {
+  position: relative;
   margin: 1rem 0;
   font-family: "Muli", serif;
   font-size: 44.8px;
@@ -1537,19 +1550,24 @@ ul.nav-menu li a:hover {
   text-transform: uppercase;
   word-break: break-word;
   width: 100%;
+  z-index: 50;
   animation-duration: 2s;
   animation-delay: 1s;
   animation-iteration-count: 1;
 }
 .site-branding .site-title a {
+  position: relative;
   text-decoration: none;
   color: inherit;
+  z-index: 50;
 }
 .site-branding .site-description {
+  position: relative;
   margin: .8rem 0;
   font-size: 17.6px;
   font-size: 1.1rem;
   color: #fff;
+  z-index: 50;
   animation-duration: 2.2s;
   animation-delay: 3.2s;
   animation-iteration-count: 1;
@@ -1564,6 +1582,7 @@ ul.nav-menu li a:hover {
 .site-title a {
   text-decoration: none;
   color: inherit;
+  z-index: 50;
 }
 
 .site-title a:hover,
@@ -1946,5 +1965,509 @@ img.alignleft {
 .gallery-caption {
   display: block;
 }
+
+/*--------------------------------------------------------------
+# Front Page Styles
+--------------------------------------------------------------*/
+/* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+.hover-tile-outer {
+  background: url("http://localhost/wordpress/wp-content/uploads/2016/02/IslandEmbroidery_screenshot2-1024x647.jpg");
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  height: 20em;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 40em) {
+  .hover-tile-outer {
+    width: 50%;
+  }
+}
+.hover-tile-outer .hover-tile-container {
+  height: 20em;
+  overflow: hidden;
+}
+
+.hover-tile-outer .hover-tile-container:hover > .hover-tile {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+
+.hover-tile-outer .hover-tile {
+  -webkit-transition: all, 0.2s ease-in-out;
+  -moz-transition: all, 0.2s ease-in-out;
+  transition: all, 0.2s ease-in-out;
+  background: inherit;
+  color: white;
+  height: inherit;
+  overflow: hidden;
+  padding: 1.5em;
+}
+
+.hover-tile-outer .hover-tile-hidden {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hover-tile-outer .hover-tile-hidden p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5em;
+}
+
+.hover-tile-outer .hover-tile-hidden h4 {
+  margin: 0 0 0.5em 0;
+}
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Navbar
+# Content Area
+# Jumbotron
+# Profile
+# Competencies
+# Works
+# Contact
+# Text Animation
+
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Content Area
+--------------------------------------------------------------*/
+.content-area.lander-page {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.site-main.lander-main {
+  margin: 0;
+  max-width: 100%;
+}
+
+.lander-page .entry-content {
+  position: relative;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.indent {
+  margin: 0 2rem;
+  max-width: 1120px;
+}
+
+.content-area {
+  background: transparent;
+}
+.content-area h4 {
+  font-size: 1.5rem;
+}
+
+.lander-section {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 4em;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  background: #242424;
+}
+
+.section-title {
+  margin-bottom: 0;
+  margin: 1rem -1rem;
+  padding: 0 10px;
+  border-bottom: 2px solid #F3EFE0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+@media screen and (min-width: 760px) {
+  .indent {
+    margin: 0;
+    padding: 0 4rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .indent {
+    margin: 0 auto;
+  }
+}
+.pointless-wrap {
+  margin: 0 -15px;
+}
+
+/*--------------------------------------------------------------
+# Jumbotron
+--------------------------------------------------------------*/
+#jumbotron {
+  display: none;
+  padding: 0;
+  margin: 0;
+  background-image: url("images/cks-dev-office_1500x996.jpg");
+  background-size: cover;
+}
+
+.fullheight {
+  display: flex;
+  align-items: center;
+}
+.fullheight h4 {
+  text-align: center;
+}
+
+.row.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .header-image {
+    margin: 0 auto;
+    float: none;
+  }
+
+  #cartoon-me {
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #story {
+    font-size: .8em;
+  }
+}
+#jumbotron {
+  padding: 0;
+  color: white;
+  font-family: 'Source Code Pro', courier;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+#jumbotron .wrap {
+  max-width: 600px;
+  margin: 150px auto;
+}
+#jumbotron .type-wrap {
+  margin: 10px auto;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  border: #CCC 1px solid;
+}
+#jumbotron #story {
+  font-size: .8em;
+  line-height: .8em;
+}
+
+@media screen and (min-width: 360px) {
+  .jumbotron .container h1 {
+    font-size: 3rem;
+  }
+  .jumbotron .container p {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  .jumbotron .container h1 {
+    font-size: 6rem;
+  }
+  .jumbotron .container p {
+    font-size: 1.5rem;
+  }
+}
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*--------------------------------------------------------------
+# Profile
+--------------------------------------------------------------*/
+#profile {
+  /* color: black;
+  color:  hsl(0, 0%, 0%);
+  background: #F2F2F2;
+  background: hsl(0, 0%, 95%); */
+}
+#profile .entry-content {
+  display: flex;
+  flex-direction: column;
+}
+#profile .entry-content .about-col {
+  order: 1;
+  padding: 0 20px;
+  flex: 1;
+}
+#profile .entry-content .profile-thumb {
+  order: 2;
+  flex: 1;
+  padding: 0 20px;
+}
+#profile .entry-content .details-col {
+  order: 3;
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 760px) {
+  #profile .entry-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #profile .entry-content .details-col {
+    text-align: left;
+  }
+}
+.profile-col {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.profile-thumb {
+  text-align: center;
+}
+.profile-thumb img {
+  border-radius: 1000px;
+  border: 8px solid #F3EFE0;
+}
+
+/*--------------------------------------------------------------
+# Competencies
+--------------------------------------------------------------*/
+#competencies ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+#competencies ul li {
+  display: inline-block;
+}
+#competencies .using {
+  float: left;
+}
+#competencies .learning {
+  float: right;
+}
+#competencies .codepen-link {
+  clear: both;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Works
+--------------------------------------------------------------*/
+#works .project.row {
+  margin-bottom: 30px;
+  padding: 1em 0;
+  margin: 1em 0;
+}
+#works .project.row:last-child {
+  border-bottom: none;
+}
+#works .works-title {
+  margin-top: 0.5rem;
+  color: #cfa144;
+  font-weight: bold;
+}
+
+.cards {
+  display: block;
+}
+
+.card {
+  background-color: #F3EFE0;
+  margin-bottom: 1.5em;
+}
+.card a {
+  text-decoration: none;
+  color: black;
+}
+.card a:hover,
+.card a:focus {
+  box-shadow: 3px 3px 8px #000;
+}
+
+.card-content {
+  padding: 1.4em;
+}
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-weight: normal;
+  font-size: 2em;
+}
+.card-content p {
+  font-size: 95%;
+}
+
+@media screen and (min-width: 40em) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    display: flex;
+    flex: 0 1 calc(50% - 1em);
+    margin-bottom: 2em;
+  }
+}
+#works .my-project {
+  padding: 0;
+}
+
+#works2 {
+  display: none;
+}
+
+#test {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact .wpcf7 {
+  text-transform: uppercase;
+  background-color: transparent;
+  margin-top: 1rem;
+}
+#contact .wpcf7 h2, #contact .wpcf7 h4, #contact .wpcf7 p {
+  color: #FCFCFC;
+  color: #f2f2f2;
+}
+#contact .wpcf7 input {
+  color: #f1f1f1;
+  outline: 1px solid #242424;
+  background: #272727;
+}
+#contact .wpcf7 input[type="text"],
+#contact .wpcf7 input[type="email"] {
+  height: 2.6rem;
+  font-size: 1em;
+}
+#contact .wpcf7 input[type="text"],
+#contact .wpcf7 input[type="email"],
+#contact .wpcf7 textarea {
+  padding-left: 2%;
+  padding-right: 2%;
+  outline: 1px solid #242424;
+  background: #272727;
+}
+#contact .item {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  padding-bottom: 120px;
+}
+#contact label {
+  display: block;
+  font-family: 'Lato',sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 10px;
+}
+#contact input#send,
+#contact .widget_meta abbr,
+#contact input#submit {
+  color: #cfa144;
+}
+#contact input#send {
+  background: #272727;
+}
+#contact .button, #contact button, #contact input[type="submit"], #contact input[type="reset"], #contact input[type="button"] {
+  background: #272727;
+  margin-top: 10px;
+  border: none;
+  color: #cfa144;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: normal;
+  padding: 15px 25px;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 100%;
+  outline: 1px solid #242424;
+}
+#contact .button, #contact button:hover, #contact input[type="submit"]:hover, #contact input[type="reset"]:hover, #contact input[type="button"]:hover,
+#contact .button, #contact button, #contact input[type="submit"]:focus, #contact input[type="reset"]:focus, #contact input[type="button"]:focus {
+  background: #313131;
+}
+
+@media screen and (min-width: 45em) {
+  #contact .wpcf7 {
+    margin-top: 3rem;
+  }
+  #contact .wpcf7 input[type="text"],
+  #contact .wpcf7 input[type="email"] {
+    /* padding-top: .6rem;
+    padding-bottom: .6rem; */
+  }
+}
+/*--------------------------------------------------------------
+# Typed.js
+--------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

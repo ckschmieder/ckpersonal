@@ -7,6 +7,16 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1rem;
 }
 
+.lander-page h3 {
+	color: $color_golden;
+}
+
+.lander-page h2.section-title {
+	color: $color_blue;
+}
+
+
+
 h1 { @include font-size(2.4); }
 h2 { @include font-size(2.2); }
 h3 { @include font-size(2); }

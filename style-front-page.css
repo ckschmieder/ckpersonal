@@ -107,6 +107,7 @@ html {
 .lander-section {
   position: relative;
   margin: 0 auto;
+  padding-bottom: 4em;
   width: 100%;
   overflow: hidden;
   z-index: 2;
@@ -114,7 +115,6 @@ html {
 }
 
 .section-title {
-  color: teal;
   margin-bottom: 0;
   margin: 1rem -1rem;
   padding: 0 10px;
@@ -379,7 +379,6 @@ html {
 --------------------------------------------------------------*/
 #works .project.row {
   margin-bottom: 30px;
-  border-bottom: 3px dotted teal;
   padding: 1em 0;
   margin: 1em 0;
 }
@@ -388,7 +387,7 @@ html {
 }
 #works .works-title {
   margin-top: 0.5rem;
-  color: #FF5475;
+  color: #cfa144;
   font-weight: bold;
 }
 
