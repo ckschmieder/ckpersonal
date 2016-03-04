@@ -480,9 +480,7 @@ html {
 }
 #contact .wpcf7 input[type="text"],
 #contact .wpcf7 input[type="email"] {
-  height: 1.2em;
-  padding-top: .6rem;
-  padding-bottom: .6rem;
+  height: 2.6rem;
   font-size: 1em;
 }
 #contact .wpcf7 input[type="text"],
