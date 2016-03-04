@@ -72,12 +72,6 @@ html {
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
-@media screen and (min-width: 50em) {
-  .main-navigation {
-    position: fixed;
-    background-color: transparent;
-  }
-}
 /*--------------------------------------------------------------
 # Content Area
 --------------------------------------------------------------*/
@@ -111,13 +105,16 @@ html {
 }
 
 .lander-section {
-  margin: 1rem;
-  padding-bottom: 1rem;
-  background-image: url("images/bg-dark.jpg");
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  background: #242424;
 }
 
 .section-title {
-  color: #70DC9E;
+  color: teal;
   margin-bottom: 0;
   margin: 1rem -1rem;
   padding: 0 10px;
@@ -382,7 +379,7 @@ html {
 --------------------------------------------------------------*/
 #works .project.row {
   margin-bottom: 30px;
-  border-bottom: 3px dotted #70DC9E;
+  border-bottom: 3px dotted teal;
   padding: 1em 0;
   margin: 1em 0;
 }
@@ -468,6 +465,7 @@ html {
 # Contact
 --------------------------------------------------------------*/
 #contact .wpcf7 {
+  text-transform: uppercase;
   background-color: transparent;
   margin-top: 1rem;
 }
@@ -475,16 +473,68 @@ html {
   color: #FCFCFC;
   color: #f2f2f2;
 }
+#contact .wpcf7 input {
+  color: #f1f1f1;
+  outline: 1px solid #242424;
+  background: #272727;
+}
+#contact .wpcf7 input[type="text"],
+#contact .wpcf7 input[type="email"] {
+  height: 1.2em;
+  padding-top: .6rem;
+  padding-bottom: .6rem;
+  font-size: 1em;
+}
 #contact .wpcf7 input[type="text"],
 #contact .wpcf7 input[type="email"],
 #contact .wpcf7 textarea {
-  height: 2.5rem;
-  background-color: transparent;
-  color: #fff;
-  line-height: 2;
+  padding-left: 2%;
+  padding-right: 2%;
+  outline: 1px solid #242424;
+  background: #272727;
 }
-#contact .wpcf7 textarea {
-  height: 10rem;
+#contact .item {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  padding-bottom: 120px;
+}
+#contact label {
+  display: block;
+  font-family: 'Lato',sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 10px;
+}
+#contact input#send,
+#contact .widget_meta abbr,
+#contact input#submit {
+  color: #cfa144;
+}
+#contact input#send {
+  background: #272727;
+}
+#contact .button, #contact button, #contact input[type="submit"], #contact input[type="reset"], #contact input[type="button"] {
+  background: #272727;
+  margin-top: 10px;
+  border: none;
+  color: #cfa144;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: normal;
+  padding: 15px 25px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 100%;
+  outline: 1px solid #242424;
+}
+#contact .button, #contact button:hover, #contact input[type="submit"]:hover, #contact input[type="reset"]:hover, #contact input[type="button"]:hover,
+#contact .button, #contact button, #contact input[type="submit"]:focus, #contact input[type="reset"]:focus, #contact input[type="button"]:focus {
+  background: #313131;
 }
 
 @media screen and (min-width: 45em) {
@@ -493,10 +543,8 @@ html {
   }
   #contact .wpcf7 input[type="text"],
   #contact .wpcf7 input[type="email"] {
-    height: 3rem;
-  }
-  #contact .wpcf7 textarea {
-    height: 14rem;
+    /* padding-top: .6rem;
+    padding-bottom: .6rem; */
   }
 }
 /*--------------------------------------------------------------

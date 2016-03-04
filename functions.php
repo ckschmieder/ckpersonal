@@ -118,7 +118,13 @@ add_action( 'widgets_init', 'ckpersonal_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ckpersonal_scripts() {
+	// Load Bootstrap
 	wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/css/bootstrap.css');
+
+	// Load Animate.css
+	wp_enqueue_style( 'ckpersonal-animate-css', get_stylesheet_directory_uri() . '/css/animate.css');
+
+	// Load main stylesheet
 	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_uri() );
 
 	// Load stylesheet and scripts for the front-page only when on the front page	

@@ -32,9 +32,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ckpersonal' ); ?></button>
+
+	<nav id="site-navigation" class="main-navigation" role="navigation">		
 
 		<?php    
 		if (is_front_page()){

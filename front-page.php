@@ -99,7 +99,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						echo '<h2 class="section-title">' . get_the_title() . '</h2>';
 						echo '<div class="entry-content">';
 						echo '<figure class="profile-thumb">';
-						the_post_thumbnail('medium','style=max-width:240px;');
+						the_post_thumbnail('medium','style=max-width:220px;');
 						echo '</figure>';
 						
 						the_content();
@@ -227,11 +227,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 
 <nav id="site-navigation" class="main-navigation" role="navigation">
-	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ckpersonal' ); ?></button>
+	
 
 	<?php    
 	if (is_front_page()){
-		wp_nav_menu( array( 'menu' => 'Front Page Menu' ) );
+		wp_nav_menu( array( 'menu' => 'Front Page Menu', 'menu_class' => 'home-menu animate slideInRight', ) );
 	} else {
 		wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu', ) );
 	}

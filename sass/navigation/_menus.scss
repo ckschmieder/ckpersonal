@@ -2,8 +2,8 @@
 /* Most menu styles below are taken from the Twenty Fifteen theme */
 
 .main-navigation {
-	clear: both;
-	display: block;
+	/* clear: both;
+	display: block; */
 	font-family: $font__headings;
 	@include font-size-em(1);
 	// float: left;
@@ -12,22 +12,22 @@
 	z-index: 99;
 
 	ul {
-		display: none;		
-		list-style: none;
+		/* display: none;		
+		list-style: none; */
 		margin: 0;
 		padding-left: 0;
 
 		li {
-			position: relative;
+			/* position: relative;
 		    flex: 1 0 85px;
 		    display: flex;
 		    justify-content: center;
-		    align-items: center;
+		    align-items: center; */
 
 			&:hover > a,
 			&.focus > a {
-				color: #208683;
-				font-weight: bold;
+				/* color: #208683;
+				font-weight: bold; */
 			}
 		}
 
@@ -41,8 +41,8 @@
 		}
 
 		ul {
-			display: none;
-			margin-left: 0.8em;
+			/* display: none;
+			margin-left: 0.8em; */
 
 			ul {
 				
@@ -73,20 +73,20 @@
 
 
 	a {
-		display: block;
-	    padding: 1.2em 1em;
-	    position: relative;
+		// display: block;
+	    // padding: 1.2em 1em;
+	    // position: relative;
 	    font-weight: 400;
 	    text-decoration: none;
 	    line-height: 1.6em;
-	    flex: 1 0 100%;    
-	    text-align: center;
+	    // flex: 1 0 100%;    
+	    // text-align: center;
 		color: $color_nav_white;
 	}
 
 	a:hover,
 	a:focus {
-		color: #208683;
+		color: teal;
     	font-weight: bold;
 	}
 
@@ -99,7 +99,7 @@
 }
 
 .main-navigation ul .toggled-on {
-	display: block;
+	// display: block;
 }
 
 
@@ -108,7 +108,7 @@
 .main-navigation .current-menu-ancestor > a {
 	font-weight: 700;
 	/* background: #fff; */
-    color: #208683;
+    color: teal;
     font-weight: bold;
 }
 
@@ -119,7 +119,7 @@
 
 .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
-	padding-right: 48px;
+	// padding-right: 48px;
 }
 
 .main-navigation .menu-item-description {
@@ -130,7 +130,7 @@
 	font-size: 1.2rem;
 	font-weight: 400;
 	line-height: 1.5;
-	margin-top: 0.5em;
+	// margin-top: 0.5em;
 }
 
 .no-js .main-navigation ul ul {
@@ -202,11 +202,11 @@
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	// display: block;
 }
 
 .menu-toggle {
-	width: 88px;
+	/* width: 88px;
 	position: fixed;
 	z-index: 1000;
 	left: 1em;
@@ -216,22 +216,22 @@
 	background-color: $black;
 	color: $white;
 	border: solid 2px $white;
-	transition: all ease-out 400ms;
+	transition: all ease-out 400ms; */
 }
 
 .menu-toggle.hide {
-	bottom: -2.0em;
+	// bottom: -2.0em;
 }
 
 /* Make sure the button doesn't hide when menu is open. */
 
 .toggled .menu-toggle.hide {
-	bottom: 1em;
+	// bottom: 1em;
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 @media screen and (min-width: 50em) {
@@ -240,7 +240,7 @@
 	}
 	.main-navigation ul {
 		display: block;
-		min-height: 4em;
+		// min-height: 4em;
 	}
 }
 
@@ -248,44 +248,43 @@
 
 
 .main-navigation.toggled {
-	position: fixed;
-	bottom: 0;
-	padding: 1em;
-	z-index: 1;
+	// position: fixed;
+	// bottom: 0;
+	// padding: 1em;
+	// z-index: 1;
 }
 
 .nav-menu {
 	/* padding: 1em; */
-    margin-bottom: 4em;
-    background-color: #000;
-    border: 1px solid #208683;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    // margin-bottom: 4em;
+    // background-color: #000;
+    // border: 1px solid #208683;
+    // display: flex;
+    // flex-flow: row wrap;
+    // align-items: center;
     /* justify-content: center; */
-    max-width: 88px;
+    // max-width: 88px;
 }
 
-
 .main-navigation.toggled ul {
-	max-height: calc(100vh - 8em); 
+	// max-height: calc(100vh - 8em); 
 	overflow-y: auto; // allows you to scroll within this container in the browser
-	margin-bottom: 4em;
-	width: 88px;
+	// margin-bottom: 4em;
+	// width: 88px;
 }
 
 .main-navigation.toggled .nav-menu ul {
-	margin-bottom: 0;
+	// margin-bottom: 0;
 }
 
 .main-navigation.toggled ul ul {
-	display: none;
+	// display: none;
 }
 
 
 .main-navigation.toggled ul ul.toggled-on,
 .main-navigation.toggled ul ul.toggled-on > ul {
-	display: block;
+	// display: block;
 }
 
 
@@ -296,50 +295,50 @@
 	.main-navigation,
 	.main-navigation.toggled {
 		// position: relative;
-		min-height: 3.5em;
-		margin: 0 auto;
+		// min-height: 3.5em;
+		// margin: 0 auto;
 		// padding: 0 3.5em;
-		background-color: #000;
-		background-color: hsla(0, 0%, 0%, .7);
-		position: fixed;
-		margin-right: 3.5em;
-	    right: 0;
-	    top: 40%;
+		// background-color: #000;
+		// background-color: hsla(0, 0%, 0%, .7);
+		// position: fixed;
+		// margin-right: 3.5em;
+	    // right: 0;
+	    // top: 40%;
     /* background-color: transparent; */
 	}
 	
 	.nav-menu {
 		padding: 0;
 		background-color: #000;
-		background-color: hsla(0, 0%, 0%, 1);
+		background-color: hsla(0, 0%, 0%, .8);
 	}
 	
 	.main-navigation ul,
 	.main-navigation.toggled ul {
-		max-height: none;
-		padding-left: 0;
-		text-align: center;
+		// max-height: none;
+		// padding-left: 0;
+		// text-align: center;
 	}
 	
 	.main-navigation.toggled ul {
-		overflow-y: visible;
+		// overflow-y: visible;
 	}
 	
 	/* Display the menu items in a horizontal order */
 	.main-navigation li {
-		display: inline-block;
+		// display: inline-block;
 		border: none;
 	}
 	
 	/* Add an outline to the drop-down menus */
 	.main-navigation ul ul {
-		outline: 1px solid #333;
+		// outline: 1px solid #333;
 	}
 	
 	/* Left-align drop-down menu items */
 	.main-navigation li li {
-		display: block;
-		text-align: left;
+		// display: block;
+		// text-align: left;
 	}
 	
 	.main-navigation a,
@@ -391,14 +390,14 @@
 	
 	/* Simplify the drop-down toggle */
 	.dropdown-toggle {
-		top: 11px;
-		right: 12px;
-		border: none;
+		// top: 11px;
+		// right: 12px;
+		// border: none;
 	}
 	
 	.dropdown-toggle::after {
-		line-height: 27px;
-		width: 27px;
+		// line-height: 27px;
+		// width: 27px;
 	}
 	
 }
@@ -425,3 +424,71 @@
 		width: 50%;
 	}
 }
+
+
+/* Base styles that apply to all menus */
+.main-navigation {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+
+	ul {
+		display: flex;
+		justify-content: space-around;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		background: hsl(0, 0%, 15%);
+
+		li {
+			flex: 1 0 auto;
+
+			a {
+				display: block;
+			    text-decoration: none;
+			    color: white;
+			    padding: 1.2em 0;
+			}
+			a:hover {
+				background: hsl(0, 0%, 25%);
+			}
+		}
+	}
+}
+@media screen and (min-width: 50em) {
+	.main-navigation {
+		
+		position: fixed;
+		width: 90px;
+		top: 40%;
+		right: 5%;
+		
+
+		ul {
+			display: block;
+			position: fixed;
+		    width: 105px;
+		    top: 36%;
+		    right: 4%;
+		    border: 2px solid teal;
+		    border-radius: 4px;
+		}
+	}
+	
+}
+
+
+
+
+
+/* ul.nav-menu li a {
+	display: block;
+    text-decoration: none;
+    color: white;
+    padding: .7em 0;
+}
+
+ul.nav-menu li a:hover {
+	background: hsl(0, 0%, 25%);
+} */
