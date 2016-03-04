@@ -14,13 +14,12 @@
   },
   "homepage": "https://github.com/ckschmieder/ckpersonal",
   "dependencies": {
-    "bourbon": "^4.2.6",
+    "fullpage.js": "^2.7.8",
     "jquery": "^2.1.4",
-    "node-neat": "^1.7.2",
-    "node-refills": "^1.0.1"
+    "bootstrap-sass": "^3.3.6"
+    
   },
-  "devDependencies": {
-    "bootstrap-sass": "^3.3.6",
+  "devDependencies": {    
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
     "grunt-contrib-cssmin": "^0.14.0",

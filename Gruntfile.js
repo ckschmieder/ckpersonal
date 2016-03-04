@@ -63,10 +63,10 @@ module.exports = function (grunt) {
 				files  : {
 
 					"js/script.min.js": [
-						"node_modules/jquery/dist/jquery.js",
+						"node_modules/jquery/dist/jquery.min.js",
 						"node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
-						"js/typed.js"
-						
+						"node_modules/fullpage.js/jquery.fullPage.js",
+						"js/typed.js"					
 
 
 					]
