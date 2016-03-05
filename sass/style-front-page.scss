@@ -1,6 +1,10 @@
 /* Styles for the front-page. Enqued seperately and only kicks in when on the front page. */
 
-@import "tiles"; 
+/* @import "tiles";  */
+/*--------------------------------------------------------------
+# fullPage
+--------------------------------------------------------------*/
+@import "../node_modules/fullpage.js/jquery.fullPage";
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:

@@ -122,7 +122,10 @@ function ckpersonal_scripts() {
 	wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/css/bootstrap.css');
 
 	// Load Animate.css
-	wp_enqueue_style( 'ckpersonal-animate-css', get_stylesheet_directory_uri() . '/css/animate.css');
+	wp_enqueue_style( 'ckpersonal-animate', get_stylesheet_directory_uri() . '/css/animate.css');
+
+	// Load fullPage.css
+	// wp_enqueue_style( 'ckpersonal-fullPage', get_stylesheet_directory_uri() . '/node_modules/fullpage.js/jquery.fullPage.css');
 
 	// Load main stylesheet
 	wp_enqueue_style( 'ckpersonal-style', get_stylesheet_uri() );

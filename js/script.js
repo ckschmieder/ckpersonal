@@ -14,7 +14,7 @@ $(function() {
     });
 
     //Use smooth scrolling when clicking on navigation
-    $('.nav-menu a[href*=#]').click(function() {
+    /*$('.nav-menu a[href*=#]').click(function() {
       if (location.pathname.replace(/^\//, '') ===
         this.pathname.replace(/^\//, '') &&
         location.hostname === this.hostname) {
@@ -27,16 +27,23 @@ $(function() {
           return false;
         } //target.length
       } //click function
-    }); //smooth scrolling
+    }); //smooth scrolling*/
 
 
 });
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+        
     });
 });
+
+
+/*$(document).ready(function() {
+    $('#fullpage').fullpage({
+        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+    });
+});*/
 
 /*
 

@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ckpersonal' ); ?></a>
-
+	
 	<?php if ( get_header_image() ) { ?>
 		<header id="masthead" class="site-header dimmed" style="background-image: url(<?php header_image(); ?>)" role="banner">
 	<?php } else { ?>
