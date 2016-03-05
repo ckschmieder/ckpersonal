@@ -148,6 +148,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 							while ( $works_query->have_posts() ) {
 								$works_query->the_post();
 
+								echo '<div class="slide">';
 								echo '<div class="project row">';
 								echo '<figure class="work-thumb col-xs-12 col-sm-6">';
 								echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
