@@ -323,130 +323,6 @@ html.fp-enabled,
 }
 
 /*--------------------------------------------------------------
-# Jumbotron
---------------------------------------------------------------*/
-#jumbotron {
-  display: none;
-  padding: 0;
-  margin: 0;
-  background-image: url("images/cks-dev-office_1500x996.jpg");
-  background-size: cover;
-}
-
-.fullheight {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.fullheight h4 {
-  text-align: center;
-}
-
-.row.flex-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 991px) {
-  .header-image {
-    margin: 0 auto;
-    float: none;
-  }
-
-  #cartoon-me {
-    max-width: 60%;
-    display: block;
-    margin: 0 auto;
-  }
-
-  #story {
-    font-size: .8em;
-  }
-}
-#jumbotron {
-  padding: 0;
-  color: white;
-  font-family: 'Source Code Pro', courier;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-#jumbotron .wrap {
-  max-width: 600px;
-  margin: 150px auto;
-}
-#jumbotron .type-wrap {
-  margin: 10px auto;
-  padding: 20px;
-  background: #f0f0f0;
-  border-radius: 5px;
-  border: #CCC 1px solid;
-}
-#jumbotron #story {
-  font-size: .8em;
-  line-height: .8em;
-}
-
-@media screen and (min-width: 360px) {
-  .jumbotron .container h1 {
-    font-size: 3rem;
-  }
-  .jumbotron .container p {
-    font-size: 1.25rem;
-  }
-}
-@media screen and (min-width: 760px) {
-  .jumbotron .container h1 {
-    font-size: 6rem;
-  }
-  .jumbotron .container p {
-    font-size: 1.5rem;
-  }
-}
-.typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/*--------------------------------------------------------------
 # Profile
 --------------------------------------------------------------*/
 #profile {
@@ -562,6 +438,11 @@ html.fp-enabled,
 /*--------------------------------------------------------------
 # Works
 --------------------------------------------------------------*/
+#works .slider-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 #works .project.row {
   margin-bottom: 30px;
   padding: 1em 0;

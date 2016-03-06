@@ -34,7 +34,12 @@ $(function() {
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide'],
+        showActiveTooltip: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom'
     });
 });
 

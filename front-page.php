@@ -62,8 +62,8 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 		<!-- Profile -->
 			
-			<div class="section">
-				<section id="profile" class="lander-section">
+			
+				<section id="profile" class="lander-section section">
 					<div class="container">
 						<?php 
 						$query = new WP_Query( 'pagename=profile' );
@@ -86,12 +86,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						?>
 					</div><!-- .indent -->
 				</section>
-			</div>
 		<!-- END Profile -->
 
 		<!-- Competencies -->
-			<div class="section">
-				<section id="competencies" class="lander-section">
+
+				<section id="competencies" class="lander-section section">
 					<div class="container">
 						<?php 
 						$query = new WP_Query( 'pagename=competencies' );
@@ -110,13 +109,12 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						?>
 					</div><!-- .indent -->
 				</section>
-			</div>
 		<!-- END Competencies -->
 
 		<!-- Works -->
 			<div class="section">
 				<section id="works" class="lander-section">
-					<div class="container">
+					<div class="container-fluid">
 						<?php 
 						$query = new WP_Query( 'pagename=works' );
 						$works_id = $query->queried_object->ID;				
@@ -125,9 +123,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						if ( $query->have_posts() ) {
 							while ( $query->have_posts() ) {
 								$query->the_post();
-								echo '<h2 class="section-title">' . get_the_title() . '</h2>';
+								echo '<div class="slider-header">';
+								echo '<h2 class="section-title slider-title">' . get_the_title() . '</h2>';
 								echo '<div class="entry-content">';
 								the_content('');
+								echo '</div>';
 								echo '</div>';
 							}
 						}
@@ -144,20 +144,20 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						// The Loop
 						if ( $works_query->have_posts() ) {
 							
-							echo '<div class="pointless-wrap">';
+							echo '<div class="container">';
 							while ( $works_query->have_posts() ) {
 								$works_query->the_post();
 
 								echo '<div class="slide">';
 								echo '<div class="project row">';
-								echo '<figure class="work-thumb col-xs-12 col-sm-6">';
+								echo '<figure class="work-thumb col-xs-12 col-md-6">';
 								echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
 								
 								the_post_thumbnail( 'lander-thumb-sm','style=width:100%;max-width:100%;height:auto;');
 								
 								echo '</a>';
 								echo '</figure>';
-								echo '<aside class="work-content col-xs-12 col-sm-6">';
+								echo '<aside class="work-content col-xs-12 col-md-6">';
 								echo '<h2 class="works-title">';
 								the_title();
 								echo '</h2>';
