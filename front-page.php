@@ -10,10 +10,9 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <div id="primary" class="content-area lander-page">
 	<main id="main" class="site-main lander-main" role="main">
-
 		<div id="fullpage">
 
-
+		<!-- header -->
 			<?php if ( get_header_image() ) { ?>
 				<header id="masthead" class="site-header dimmed section" style="background-image: url(<?php header_image(); ?>)" role="banner">
 			<?php } else { ?>
@@ -56,13 +55,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						endif; ?>
 					</div><!-- .site-branding -->
 
-					
 				</header><!-- #masthead -->
-		<!-- Jumbotron -->
+			<!-- header -->
 
-		<!-- Profile -->
-			
-			
+			<!-- #profile -->	
 				<section id="profile" class="lander-section section">
 					<div class="container">
 						<?php 
@@ -86,10 +82,9 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						?>
 					</div><!-- .indent -->
 				</section>
-		<!-- END Profile -->
+			<!-- END #profile -->
 
-		<!-- Competencies -->
-
+			<!-- #competencies -->
 				<section id="competencies" class="lander-section section">
 					<div class="container">
 						<?php 
@@ -109,11 +104,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						?>
 					</div><!-- .indent -->
 				</section>
-		<!-- END Competencies -->
+			<!-- END #competencies -->
 
-		<!-- Works -->
-			<div class="section">
-				<section id="works" class="lander-section">
+			<!-- #works -->			
+				<section id="works" class="lander-section section">
 					<div class="container-fluid">
 						<?php 
 						$query = new WP_Query( 'pagename=works' );
@@ -178,12 +172,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 					</div><!-- .container -->
 				</section>
-			</div>
-		<!-- END Works -->
+			<!-- END #works -->
 
-		<!-- Contact -->
-			<div class="section">
-				<section id="contact" class="lander-section">
+			<!-- #contact -->			
+				<section id="contact" class="lander-section section">
 					<div class="container">			
 						<?php 
 						$query = new WP_Query( 'pagename=contact' );
@@ -201,17 +193,15 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						wp_reset_postdata();
 						?>
 					</div>
-				</section>
-			</div>
-		<!-- END Contact -->
+				</section>			
+			<!-- END #contact -->
 
 		</div><!-- #fullpage -->
 	</main><!-- #main -->
 </div><!-- #primary -->
 
 
-<nav id="site-navigation" class="main-navigation" role="navigation">
-	
+<nav id="site-navigation" class="main-navigation" role="navigation">	
 
 	<?php    
 	if (is_front_page()){
