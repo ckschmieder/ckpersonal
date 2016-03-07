@@ -1561,13 +1561,17 @@ ul.nav-menu li a:hover {
 }
 
 .site-branding {
-  position: relative;
   text-align: center;
   margin: 0 auto;
   max-width: 954px;
   align-self: center;
   overflow: hidden;
   z-index: 15;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 .site-branding .site-title {
   position: relative;
