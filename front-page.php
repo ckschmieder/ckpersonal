@@ -10,7 +10,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 <div id="primary" class="content-area lander-page">
 	<main id="main" class="site-main lander-main" role="main">
-		<div id="fullpage">
+		<div id="fullpage" data-spy="scroll" data-target=".nav-menu" data-offset="50">
 
 		<!-- header -->
 			<?php if ( get_header_image() ) { ?>
@@ -20,7 +20,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			<?php } ?>	
 				
 					<?php // Display site icon or first letter as logo ?>	
-					<div class="site-logo">
+					<div id="site-logo" class="site-logo">
 						<?php $site_title = get_bloginfo( 'name' ); ?> <!-- get site title -->
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <!-- setup link that points to homepage -->
 							<div class="screen-reader-text">
@@ -84,11 +84,11 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 				</section>
 			<!-- END #profile -->
 
-			<!-- #competencies -->
-				<section id="competencies" class="lander-section section">
+			<!-- #skills -->
+				<section id="skills" class="lander-section section">
 					<div class="container">
 						<?php 
-						$query = new WP_Query( 'pagename=competencies' );
+						$query = new WP_Query( 'pagename=skills' );
 						// The Loop
 						if ( $query->have_posts() ) {
 							while ( $query->have_posts() ) {
@@ -104,7 +104,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						?>
 					</div><!-- .indent -->
 				</section>
-			<!-- END #competencies -->
+			<!-- END #skills -->
 
 			<!-- #works -->			
 				<section id="works" class="lander-section section">
@@ -147,7 +147,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 								echo '<figure class="work-thumb col-xs-12 col-md-6">';
 								echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
 								
-								the_post_thumbnail( 'lander-thumb-sm','style=width:100%;max-width:100%;height:auto;');
+								the_post_thumbnail( 'lander-thumb-sm');
 								
 								echo '</a>';
 								echo '</figure>';

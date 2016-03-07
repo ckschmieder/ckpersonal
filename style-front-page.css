@@ -249,7 +249,7 @@ html.fp-enabled,
 # fullPage
 # Jumbotron
 # Profile
-# Competencies
+# Skills
 # Works
 # Contact
 # Text Animation
@@ -328,8 +328,33 @@ html.fp-enabled,
 @media screen and (min-width: 992px) {
   .fp-tableCell {
     vertical-align: middle;
+    padding-bottom: 96px;
   }
 }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+}
+
+#fp-nav.right {
+  right: 8px;
+}
+
 /*--------------------------------------------------------------
 # Profile
 --------------------------------------------------------------*/
@@ -344,11 +369,9 @@ html.fp-enabled,
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 #profile .entry-content .about-col {
   -webkit-box-ordinal-group: 2;
@@ -357,9 +380,9 @@ html.fp-enabled,
           order: 1;
   padding: 0 20px;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: 1 1 200px;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
 }
 #profile .entry-content .profile-thumb {
   -webkit-box-ordinal-group: 3;
@@ -367,10 +390,13 @@ html.fp-enabled,
       -ms-flex-order: 2;
           order: 2;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: 1 1 220px;
+      -ms-flex: 1 1 220px;
+          flex: 1 1 220px;
   padding: 0 20px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 #profile .entry-content .details-col {
   -webkit-box-ordinal-group: 4;
@@ -378,33 +404,12 @@ html.fp-enabled,
       -ms-flex-order: 3;
           order: 3;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-flex: 1 0 200px;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
   padding: 0 20px;
-  text-align: center;
 }
 
-@media screen and (min-width: 760px) {
-  #profile .entry-content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #profile .entry-content .details-col {
-    text-align: left;
-  }
-}
 .profile-col {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -421,24 +426,38 @@ html.fp-enabled,
   border: 8px solid #F3EFE0;
 }
 
+/* @media screen and (min-width: 760px) {
+    #profile .entry-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .details-col {
+            text-align: left;
+        }
+        .profile-thumb {
+            align-self: center;
+        }
+    }
+} */
 /*--------------------------------------------------------------
-# Competencies
+# Skills
 --------------------------------------------------------------*/
-#competencies ul {
+#skills ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
-#competencies ul li {
+#skills ul li {
   display: inline-block;
 }
-#competencies .using {
+#skills .using {
   float: left;
 }
-#competencies .learning {
+#skills .learning {
   float: right;
 }
-#competencies .codepen-link {
+#skills .codepen-link {
   clear: both;
   text-align: center;
 }

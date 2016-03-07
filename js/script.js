@@ -34,15 +34,31 @@ $(function() {
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
+        menu: '.home-menu',
         navigation: false,
+        lockAnchors: true,
+        anchors:['masthead', 'profile', 'skills', 'works', 'contact'],
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide'],
+        navigationTooltips: ['Home', 'Profile', 'Skills', 'Works', 'Contact'],
         showActiveTooltip: false,
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
-        paddingTop: '45px',
+        autoScrolling: true,
+        fitToSection: false,
+        paddingTop: '5px',
         paddingBottom: '0px',
-        fixedElements: '#site-navigation'
+        fixedElements: '#site-navigation',
+        fitToSectionDelay: 1000,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        controlArrows: true,
+        verticalCentered: true,
+        resize : true
     });
 });
 

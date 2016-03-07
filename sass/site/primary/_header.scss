@@ -31,12 +31,12 @@
 }
 
 .site-logo {
-	position: fixed;
+	// position: fixed;
 	z-index: 15;
 
 	a {
 		position: absolute;
-		z-index: 10;
+		z-index: 15;
 		top: 1em;
 		left: 1em;
 		display: block;
@@ -56,10 +56,10 @@
 
 .site-firstletter {
 	font-family: $font__headings;
-	@include font-size(1.5); 
+	@include font-size-em(1.5); 
 	font-weight: 700;
 	text-align: center;
-	line-height: 1.3em;
+	line-height: 1.3em; 
 }
 
 .site-logo a:hover .site-firstletter,
@@ -95,7 +95,7 @@
 		text-transform: uppercase;
 		word-break: break-word;
 		width: 100%;
-		z-index: 50;
+		z-index: 15;
 		animation-duration: 2s;
 		animation-delay: 1s;
 		animation-iteration-count: 1;
@@ -104,7 +104,7 @@
 		 	position: relative;
 			text-decoration: none;
 			color: inherit;
-			z-index: 50;
+			z-index: 15;
 		}
 	}
 
@@ -113,7 +113,7 @@
 		margin: .8rem 0;
 		@include font-size(1.1);
 		color: #fff;
-		z-index: 50;
+		z-index: 15;
 		animation-duration: 2.2s;
 		animation-delay: 3.2s;
 		animation-iteration-count: 1;
@@ -131,7 +131,7 @@
 .site-title a {
 	text-decoration: none;
 	color: inherit;
-	z-index: 50;
+	z-index: 15;
 }
 
 .site-title a:hover,

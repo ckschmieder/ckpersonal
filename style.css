@@ -294,8 +294,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   clear: both;
   line-height: 1.3em;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: .5rem;
 }
 
 .lander-page h3 {
@@ -307,39 +307,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lander-page .section-title {
-  color: #4472cf;
-  font-family: arial, serif;
+  color: #e9e9e9;
+  font-family: arial black, serif;
   font-weight: bold;
+}
+
+.lander-page .section-title:after {
+  content: ".";
+  color: #46B6FF;
 }
 
 h1 {
   font-size: 41.6px;
-  font-size: 2.6rem;
+  font-size: 2.6em;
 }
 
 h2 {
   font-size: 35.2px;
-  font-size: 2.2rem;
+  font-size: 2.2em;
 }
 
 h3 {
-  font-size: 30.4px;
-  font-size: 1.9rem;
+  font-size: 28.8px;
+  font-size: 1.8em;
 }
 
 h4 {
   font-size: 27.2px;
-  font-size: 1.7rem;
+  font-size: 1.7em;
 }
 
 h5 {
   font-size: 25.6px;
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 
 h6 {
   font-size: 22.4px;
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 
 p {
@@ -404,7 +409,7 @@ big {
   margin: 1.4em;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.75em;
+  line-height: 1.3em;
 }
 
 .section-title {
@@ -413,14 +418,10 @@ big {
   font-weight: bold;
 }
 
-.container-small {
-  widows: 90%;
-}
-
 @media screen and (min-width: 30em) {
   .site-main {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 17.6px;
+    font-size: 1.1rem;
     margin: 1.8em;
   }
 
@@ -435,8 +436,8 @@ big {
 }
 @media screen and (min-width: 40em) {
   .site-main {
-    font-size: 17.6px;
-    font-size: 1.1rem;
+    font-size: 19.2px;
+    font-size: 1.2rem;
   }
 
   .section-title {
@@ -450,8 +451,8 @@ big {
 }
 @media screen and (min-width: 57em) {
   .site-main {
-    font-size: 19.2px;
-    font-size: 1.2rem;
+    font-size: 20.8px;
+    font-size: 1.3rem;
     max-width: 45em;
     margin: 1.8em auto;
   }
@@ -461,9 +462,9 @@ big {
     font-size: 4rem;
   }
 
-  .container-small {
-    widows: 1040px;
-  }
+  /* .container-small {
+  	widows: 1040px;
+  } */
 }
 .page-title {
   text-align: center;
@@ -488,10 +489,11 @@ big {
   font-style: italic;
 }
 
-.container-small {
-  widows: 90%;
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
 }
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -561,15 +563,17 @@ dd {
 .tools,
 .skills {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
-  flex-wrap: wrap;
+  margin-bottom: .4em;
 }
 .tech li,
 .tools li,
 .skills li {
-  padding: 0px 6px 0px 6px;
+  padding: 2px 5px;
   background-color: rgba(255, 255, 255, 0.3);
   color: #1c1c1c;
   display: inline-block;
@@ -577,21 +581,24 @@ dd {
   margin-bottom: 11px;
   font-family: "futura-pt", futura, helvetica, arial, sans-serif;
   font-size: .9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.5rem;
+  text-transform: none;
+  line-height: 1em;
+}
+
+.skills {
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 @media screen and (max-width: 650px) {
   .tech li,
   .tools li,
   .skills li {
-    padding: 1px 5px 0px 5px;
-    line-height: 1.2em;
-    font-size: 1.1em;
-    margin-bottom: 8px;
-    margin-right: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    margin-right: 6px;
+    line-height: 1;
+    font-family: arial narrow, futura, helvetica, arial, sans-serif;
+    font-size: .9rem;
   }
 }
 img {
@@ -1030,21 +1037,18 @@ a:hover, a:active {
 
 /* Base styles that apply to all menus */
 .main-navigation {
-  position: fixed;
+  /* position: fixed;
   text-align: center;
   top: 0;
-  width: 100%;
+  width: 100%; */
 }
 .main-navigation ul {
-  display: flex;
-  justify-content: space-around;
   list-style-type: none;
   padding: 0;
   margin: 0;
   background: rgba(36, 36, 36, 0.6);
 }
 .main-navigation ul li {
-  flex: 1 0 auto;
   padding: 4px;
 }
 .main-navigation ul li a {
@@ -1053,24 +1057,45 @@ a:hover, a:active {
   color: white;
   padding: 6px;
   border-radius: 4px;
-  background-color: #3d3d3d;
 }
 
 @media screen and (min-width: 50em) {
   .main-navigation {
-    position: fixed;
+    /* position: fixed;
     width: 90px;
     top: 40%;
-    right: 5%;
+    right: 5%; */
   }
   .main-navigation ul {
-    display: block;
-    position: fixed;
-    width: 105px;
-    top: 36%;
-    right: 4%;
-    border: 2px solid teal;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 70;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    	/* display: block;
+    	position: fixed;
+        width: 105px;
+        top: 36%;
+        right: 4%; */
     border-radius: 4px;
+  }
+  .main-navigation ul li {
+    display: inline-block;
+    margin-left: 1rem;
+    color: #000;
+    background: gray;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 0;
+  }
+  .main-navigation ul li a {
+    font-family: monospace, serif;
+    padding: 7px 14px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
   }
 }
 /* ul.nav-menu li a {
@@ -1524,12 +1549,11 @@ ul.nav-menu li a:hover {
 }
 
 .site-logo {
-  position: fixed;
   z-index: 15;
 }
 .site-logo a {
   position: absolute;
-  z-index: 10;
+  z-index: 15;
   top: 1em;
   left: 1em;
   display: block;
@@ -1548,7 +1572,7 @@ ul.nav-menu li a:hover {
 .site-firstletter {
   font-family: "Muli", serif;
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 700;
   text-align: center;
   line-height: 1.3em;
@@ -1585,7 +1609,7 @@ ul.nav-menu li a:hover {
   text-transform: uppercase;
   word-break: break-word;
   width: 100%;
-  z-index: 50;
+  z-index: 15;
   animation-duration: 2s;
   animation-delay: 1s;
   animation-iteration-count: 1;
@@ -1594,7 +1618,7 @@ ul.nav-menu li a:hover {
   position: relative;
   text-decoration: none;
   color: inherit;
-  z-index: 50;
+  z-index: 15;
 }
 .site-branding .site-description {
   position: relative;
@@ -1602,7 +1626,7 @@ ul.nav-menu li a:hover {
   font-size: 17.6px;
   font-size: 1.1rem;
   color: #fff;
-  z-index: 50;
+  z-index: 15;
   animation-duration: 2.2s;
   animation-delay: 3.2s;
   animation-iteration-count: 1;
@@ -1617,7 +1641,7 @@ ul.nav-menu li a:hover {
 .site-title a {
   text-decoration: none;
   color: inherit;
-  z-index: 50;
+  z-index: 15;
 }
 
 .site-title a:hover,
@@ -2260,7 +2284,7 @@ html.fp-enabled,
 # fullPage
 # Jumbotron
 # Profile
-# Competencies
+# Skills
 # Works
 # Contact
 # Text Animation
@@ -2339,8 +2363,33 @@ html.fp-enabled,
 @media screen and (min-width: 992px) {
   .fp-tableCell {
     vertical-align: middle;
+    padding-bottom: 96px;
   }
 }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+}
+
+#fp-nav.right {
+  right: 8px;
+}
+
 /*--------------------------------------------------------------
 # Profile
 --------------------------------------------------------------*/
@@ -2352,35 +2401,25 @@ html.fp-enabled,
 }
 #profile .entry-content {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
 }
 #profile .entry-content .about-col {
   order: 1;
   padding: 0 20px;
-  flex: 1;
+  flex: 1 1 200px;
 }
 #profile .entry-content .profile-thumb {
   order: 2;
-  flex: 1;
+  flex: 1 1 220px;
   padding: 0 20px;
+  align-self: center;
 }
 #profile .entry-content .details-col {
   order: 3;
-  flex: 1;
+  flex: 1 0 200px;
   padding: 0 20px;
-  text-align: center;
 }
 
-@media screen and (min-width: 760px) {
-  #profile .entry-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #profile .entry-content .details-col {
-    text-align: left;
-  }
-}
 .profile-col {
   flex: 1;
   padding: 0 20px;
@@ -2394,24 +2433,38 @@ html.fp-enabled,
   border: 8px solid #F3EFE0;
 }
 
+/* @media screen and (min-width: 760px) {
+    #profile .entry-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .details-col {
+            text-align: left;
+        }
+        .profile-thumb {
+            align-self: center;
+        }
+    }
+} */
 /*--------------------------------------------------------------
-# Competencies
+# Skills
 --------------------------------------------------------------*/
-#competencies ul {
+#skills ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
-#competencies ul li {
+#skills ul li {
   display: inline-block;
 }
-#competencies .using {
+#skills .using {
   float: left;
 }
-#competencies .learning {
+#skills .learning {
   float: right;
 }
-#competencies .codepen-link {
+#skills .codepen-link {
   clear: both;
   text-align: center;
 }

@@ -14,7 +14,7 @@
 # fullPage
 # Jumbotron
 # Profile
-# Competencies
+# Skills
 # Works
 # Contact
 # Text Animation
@@ -115,7 +115,32 @@
 @media screen and (min-width: 992px) {
    .fp-tableCell {
         vertical-align: middle;
+        padding-bottom: 96px;
     } 
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+      
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+}
+
+#fp-nav.right {
+    right: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -131,41 +156,28 @@
 
     .entry-content {
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
 
         .about-col {
             order: 1;
             padding: 0 20px;
-            flex: 1;
+            flex: 1 1 200px;
             // flex-basis: 45%;
 
         }
         .profile-thumb {
             order: 2;
-            flex: 1;
+            flex: 1 1 220px;
             padding: 0 20px;
-            // flex-basis: 30%;
+            align-self: center;
+
         }
         .details-col {
             order: 3;
-            flex: 1;
+            flex: 1 0 200px;
             // flex-basis: 25%;
             padding: 0 20px;
-            text-align: center;
 
-        }
-    }
-}
-
-
-@media screen and (min-width: 760px) {
-    #profile .entry-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        .details-col {
-            text-align: left;
         }
     }
 }
@@ -187,12 +199,29 @@
     }
 }
 
+/* @media screen and (min-width: 760px) {
+    #profile .entry-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .details-col {
+            text-align: left;
+        }
+        .profile-thumb {
+            align-self: center;
+        }
+    }
+} */
+
+
+
 
 /*--------------------------------------------------------------
-# Competencies
+# Skills
 --------------------------------------------------------------*/
 
-#competencies {
+#skills {
     // background-color: #F3EFE0;
     // background-color: hsl(0, 0%, 90%);
 
