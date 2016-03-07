@@ -277,16 +277,16 @@ input,
 select,
 textarea {
   color: #fff;
-  font-family: "Fira Sans", serif;
+  font-family: "Muli", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
 .site-content {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.6em;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -306,13 +306,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #cfa144;
 }
 
-.lander-page h2.section-title {
+.lander-page .section-title {
   color: #4472cf;
+  font-family: arial, serif;
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 38.4px;
-  font-size: 2.4rem;
+  font-size: 41.6px;
+  font-size: 2.6rem;
 }
 
 h2 {
@@ -321,13 +323,13 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 30.4px;
+  font-size: 1.9rem;
 }
 
 h4 {
-  font-size: 28.8px;
-  font-size: 1.8rem;
+  font-size: 27.2px;
+  font-size: 1.7rem;
 }
 
 h5 {
@@ -400,15 +402,19 @@ big {
 
 .site-main {
   margin: 1.4em;
-  font-size: 12.8px;
-  font-size: 0.8rem;
-  line-height: 1.6em;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75em;
 }
 
 .section-title {
   font-size: 40px;
   font-size: 2.5rem;
   font-weight: bold;
+}
+
+.container-small {
+  widows: 90%;
 }
 
 @media screen and (min-width: 30em) {
@@ -422,6 +428,10 @@ big {
     font-size: 44.8px;
     font-size: 2.8rem;
   }
+
+  .container-small {
+    widows: 85%;
+  }
 }
 @media screen and (min-width: 40em) {
   .site-main {
@@ -432,6 +442,10 @@ big {
   .section-title {
     font-size: 56px;
     font-size: 3.5rem;
+  }
+
+  .container-small {
+    widows: 80%;
   }
 }
 @media screen and (min-width: 57em) {
@@ -445,6 +459,10 @@ big {
   .section-title {
     font-size: 64px;
     font-size: 4rem;
+  }
+
+  .container-small {
+    widows: 1040px;
   }
 }
 .page-title {
@@ -468,6 +486,10 @@ big {
   padding: .5em 1.8em 0;
   text-align: center;
   font-style: italic;
+}
+
+.container-small {
+  widows: 90%;
 }
 
 /*--------------------------------------------------------------
@@ -1010,7 +1032,7 @@ a:hover, a:active {
 .main-navigation {
   position: fixed;
   text-align: center;
-  bottom: 0;
+  top: 0;
   width: 100%;
 }
 .main-navigation ul {
@@ -1019,19 +1041,19 @@ a:hover, a:active {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background: #262626;
+  background: rgba(36, 36, 36, 0.6);
 }
 .main-navigation ul li {
   flex: 1 0 auto;
+  padding: 4px;
 }
 .main-navigation ul li a {
   display: block;
   text-decoration: none;
   color: white;
-  padding: 1.2em 0;
-}
-.main-navigation ul li a:hover {
-  background: #404040;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #3d3d3d;
 }
 
 @media screen and (min-width: 50em) {
@@ -1502,7 +1524,7 @@ ul.nav-menu li a:hover {
 }
 
 .site-logo {
-  position: relative;
+  position: fixed;
   z-index: 15;
 }
 .site-logo a {
@@ -2231,12 +2253,14 @@ html.fp-enabled,
 ----------------------------------------------------------------
 # Navbar
 # Content Area
+# fullPage
 # Jumbotron
 # Profile
 # Competencies
 # Works
 # Contact
 # Text Animation
+
 
 
 /*--------------------------------------------------------------
@@ -2277,7 +2301,7 @@ html.fp-enabled,
 .lander-section {
   position: relative;
   margin: 0 auto;
-  padding-bottom: 4em;
+  padding: 0;
   width: 100%;
   overflow: hidden;
   z-index: 2;
@@ -2285,11 +2309,9 @@ html.fp-enabled,
 }
 
 .section-title {
-  margin-bottom: 0;
-  margin: 1rem -1rem;
-  padding: 0 10px;
+  margin: 0;
+  padding: 12px 0 0 0;
   border-bottom: 2px solid #F3EFE0;
-  background-color: rgba(0, 0, 0, 0.35);
 }
 
 @media screen and (min-width: 760px) {
@@ -2303,10 +2325,18 @@ html.fp-enabled,
     margin: 0 auto;
   }
 }
-.pointless-wrap {
-  margin: 0 -15px;
+/*--------------------------------------------------------------
+# fullPage
+--------------------------------------------------------------*/
+.fp-tableCell {
+  vertical-align: top;
 }
 
+@media screen and (min-width: 992px) {
+  .fp-tableCell {
+    vertical-align: middle;
+  }
+}
 /*--------------------------------------------------------------
 # Profile
 --------------------------------------------------------------*/
@@ -2386,14 +2416,19 @@ html.fp-enabled,
 # Works
 --------------------------------------------------------------*/
 #works .slider-header {
-  position: absolute;
-  top: 0;
+  position: static;
   width: 100%;
 }
 #works .project.row {
   margin-bottom: 30px;
-  padding: 1em 0;
-  margin: 1em 0;
+  padding: 1rem 0 .5rem;
+}
+#works figure.work-thumb {
+  text-align: center;
+}
+#works figure.work-thumb img {
+  width: 90%;
+  max-width: 100%;
 }
 #works .project.row:last-child {
   border-bottom: none;
@@ -2401,7 +2436,7 @@ html.fp-enabled,
 #works .works-title {
   margin-top: 0.5rem;
   color: #cfa144;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .cards {

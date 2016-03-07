@@ -246,12 +246,14 @@ html.fp-enabled,
 ----------------------------------------------------------------
 # Navbar
 # Content Area
+# fullPage
 # Jumbotron
 # Profile
 # Competencies
 # Works
 # Contact
 # Text Animation
+
 
 
 /*--------------------------------------------------------------
@@ -292,7 +294,7 @@ html.fp-enabled,
 .lander-section {
   position: relative;
   margin: 0 auto;
-  padding-bottom: 4em;
+  padding: 0;
   width: 100%;
   overflow: hidden;
   z-index: 2;
@@ -300,11 +302,9 @@ html.fp-enabled,
 }
 
 .section-title {
-  margin-bottom: 0;
-  margin: 1rem -1rem;
-  padding: 0 10px;
+  margin: 0;
+  padding: 12px 0 0 0;
   border-bottom: 2px solid #F3EFE0;
-  background-color: rgba(0, 0, 0, 0.35);
 }
 
 @media screen and (min-width: 760px) {
@@ -318,10 +318,18 @@ html.fp-enabled,
     margin: 0 auto;
   }
 }
-.pointless-wrap {
-  margin: 0 -15px;
+/*--------------------------------------------------------------
+# fullPage
+--------------------------------------------------------------*/
+.fp-tableCell {
+  vertical-align: top;
 }
 
+@media screen and (min-width: 992px) {
+  .fp-tableCell {
+    vertical-align: middle;
+  }
+}
 /*--------------------------------------------------------------
 # Profile
 --------------------------------------------------------------*/
@@ -439,14 +447,19 @@ html.fp-enabled,
 # Works
 --------------------------------------------------------------*/
 #works .slider-header {
-  position: absolute;
-  top: 0;
+  position: static;
   width: 100%;
 }
 #works .project.row {
   margin-bottom: 30px;
-  padding: 1em 0;
-  margin: 1em 0;
+  padding: 1rem 0 .5rem;
+}
+#works figure.work-thumb {
+  text-align: center;
+}
+#works figure.work-thumb img {
+  width: 90%;
+  max-width: 100%;
 }
 #works .project.row:last-child {
   border-bottom: none;
@@ -454,7 +467,7 @@ html.fp-enabled,
 #works .works-title {
   margin-top: 0.5rem;
   color: #cfa144;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .cards {

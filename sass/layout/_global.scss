@@ -4,12 +4,17 @@
 
 .site-main {
 	margin: 1.4em;
-	@include font-size(.8);
-	line-height: 1.6em;
+	@include font-size(1);
+	line-height: 1.75em;
 }
 .section-title {
 	@include font-size(2.5);
 	font-weight: bold;
+}
+
+
+.container-small {
+	widows: 90%;
 }
 
 @media screen and (min-width: 30em) {
@@ -20,6 +25,9 @@
 	.section-title {
 		@include font-size(2.8);
 	}
+	.container-small {
+		widows: 85%;
+	}
 }
 
 @media screen and (min-width: 40em) {
@@ -28,6 +36,9 @@
 	}
 	.section-title {
 		@include font-size(3.5);
+	}
+	.container-small {
+		widows: 80%;
 	}
 }
 
@@ -39,6 +50,9 @@
 	}
 	.section-title {
 		@include font-size(4);
+	}
+	.container-small {
+		widows: 1040px;
 	}
 }
 
@@ -62,4 +76,8 @@
     padding: .5em 1.8em 0;
     text-align: center;
     font-style: italic;
+}
+
+.container-small {
+	widows: 90%;
 }

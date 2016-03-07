@@ -11,8 +11,8 @@ textarea {
 }
 
 .site-content {
-	@include font-size(1.125);
-	line-height: 1.6em;
+	@include font-size(1);
+	line-height: 1.4em;
 }
 
 @import "headings";

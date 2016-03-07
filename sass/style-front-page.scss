@@ -11,12 +11,14 @@
 ----------------------------------------------------------------
 # Navbar
 # Content Area
+# fullPage
 # Jumbotron
 # Profile
 # Competencies
 # Works
 # Contact
 # Text Animation
+
 
 
 /*--------------------------------------------------------------
@@ -68,7 +70,7 @@
  .lander-section {
     position: relative;
     margin: 0 auto;
-    padding-bottom: 4em;
+    padding: 0;
     width: 100%;
     overflow: hidden;
     z-index: 2;
@@ -77,11 +79,11 @@
 
 .section-title {
     // color: $color_blue;
-    margin-bottom: 0;
-    margin: 1rem -1rem;
-    padding: 0 10px;
+    margin: 0;
+    // margin: 1rem -1rem;
+    padding: 12px 0 0 0;
     border-bottom: 2px solid #F3EFE0;
-    background-color: rgba(0,0,0,0.35);
+    // background-color: rgba(0,0,0,0.35);
 }
 
 @media screen and (min-width: 760px) {
@@ -101,10 +103,20 @@
     }
 }
 
-.pointless-wrap {
-    margin: 0 -15px;
+
+/*--------------------------------------------------------------
+# fullPage
+--------------------------------------------------------------*/
+
+.fp-tableCell {
+    vertical-align: top;
 }
 
+@media screen and (min-width: 992px) {
+   .fp-tableCell {
+        vertical-align: middle;
+    } 
+}
 
 /*--------------------------------------------------------------
 # Profile
@@ -215,16 +227,25 @@
 #works {
 
     .slider-header {
-        position: absolute;
-        top: 0;
+        position: static;
+        // top: 0;
         width: 100%;
     }
 
     .project.row {
         margin-bottom: 30px;
         // border-bottom: 3px dotted $color_blue;
-        padding: 1em 0;
-        margin: 1em 0;
+        padding: 1rem 0 .5rem;
+        // margin: 1em 0;
+    }
+
+    figure.work-thumb {
+        text-align: center;
+
+        img {
+            width: 90%;
+            max-width: 100%;
+        }
     }
 
     .project.row:last-child {
@@ -235,7 +256,7 @@
         margin-top: 0.5rem;
         color: #cfa144;
         // color: $color_blue;
-        font-weight: bold;
+        font-weight: 300;
     }
 }
 

@@ -67,10 +67,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						if ( $query->have_posts() ) {
 							while ( $query->have_posts() ) {
 								$query->the_post();
-								echo '<h2 class="section-title">' . get_the_title() . '</h2>';
+								echo '<h1 class="section-title">' . get_the_title() . '</h1>';
 								echo '<div class="entry-content">';
 								echo '<figure class="profile-thumb">';
-								the_post_thumbnail('medium','style=max-width:220px;');
+								the_post_thumbnail('medium','style=max-width:200px;');
 								echo '</figure>';
 								
 								the_content();
@@ -93,7 +93,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						if ( $query->have_posts() ) {
 							while ( $query->have_posts() ) {
 								$query->the_post();
-								/*echo '<h2 class="section-title">' . get_the_title() . '</h2>';*/
+								echo '<h1 class="section-title">' . get_the_title() . '</h1>';
 								echo '<div class="entry-content">';
 								the_content();
 								echo '</div>';
@@ -108,7 +108,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 			<!-- #works -->			
 				<section id="works" class="lander-section section">
-					<div class="container-fluid">
+					<div class="container">
 						<?php 
 						$query = new WP_Query( 'pagename=works' );
 						$works_id = $query->queried_object->ID;				
@@ -118,10 +118,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 							while ( $query->have_posts() ) {
 								$query->the_post();
 								echo '<div class="slider-header">';
-								echo '<h2 class="section-title slider-title">' . get_the_title() . '</h2>';
-								echo '<div class="entry-content">';
+								echo '<h1 class="section-title slider-title">' . get_the_title() . '</h1>';
+								/*echo '<div class="entry-content">';
 								the_content('');
-								echo '</div>';
+								echo '</div>';*/
 								echo '</div>';
 							}
 						}
@@ -138,7 +138,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						// The Loop
 						if ( $works_query->have_posts() ) {
 							
-							echo '<div class="container">';
+							echo '<div class="pointless-wrap">';
 							while ( $works_query->have_posts() ) {
 								$works_query->the_post();
 
@@ -183,7 +183,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 						if ( $query->have_posts() ) {
 							while ( $query->have_posts() ) {
 								$query->the_post();
-								echo '<h2 class="section-title">' . get_the_title() . '</h2>';
+								echo '<h1 class="section-title">' . get_the_title() . '</h1>';
 								echo '<div class="entry-content">';
 								the_content();
 								echo '</div>';

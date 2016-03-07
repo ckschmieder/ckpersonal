@@ -430,7 +430,7 @@
 .main-navigation {
 	position: fixed;
 	text-align: center;
-	bottom: 0;
+	top: 0;
 	width: 100%;
 
 	ul {
@@ -439,19 +439,23 @@
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
-		background: hsl(0, 0%, 15%);
+		background: rgba(36, 36, 36, 0.6);
 
 		li {
 			flex: 1 0 auto;
+			padding: 4px;
 
 			a {
 				display: block;
 			    text-decoration: none;
 			    color: white;
-			    padding: 1.2em 0;
+			    padding: 6px;
+			    border-radius: 4px;
+			    background-color: hsl(0, 0%, 24%);
+
 			}
 			a:hover {
-				background: hsl(0, 0%, 25%);
+				// background: hsl(0, 0%, 25%);
 			}
 		}
 	}

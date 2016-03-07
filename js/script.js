@@ -39,7 +39,10 @@ $(document).ready(function() {
         navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide'],
         showActiveTooltip: false,
         slidesNavigation: true,
-        slidesNavPosition: 'bottom'
+        slidesNavPosition: 'bottom',
+        paddingTop: '45px',
+        paddingBottom: '0px',
+        fixedElements: '#site-navigation'
     });
 });
 
