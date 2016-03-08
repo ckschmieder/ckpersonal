@@ -14,7 +14,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 		<!-- header -->
 			<?php if ( get_header_image() ) { ?>
-				<header id="masthead" class="site-header dimmed section" style="background-image: url(<?php header_image(); ?>)" role="banner">
+				<header id="masthead" class="site-header dimmed section" data-anchor="section1" style="background-image: url(<?php header_image(); ?>)" role="banner">
 			<?php } else { ?>
 				<header id="masthead" class="site-header section" role="banner">
 			<?php } ?>	
@@ -59,7 +59,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			<!-- header -->
 
 			<!-- #profile -->	
-				<section id="profile" class="lander-section section">
+				<section id="profile" class="lander-section section" data-anchor="section2">
 					<div class="container">
 						<?php 
 						$query = new WP_Query( 'pagename=profile' );
@@ -85,7 +85,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			<!-- END #profile -->
 
 			<!-- #skills -->
-				<section id="skills" class="lander-section section">
+				<section id="skills" class="lander-section section" data-anchor="section3">
 					<div class="container">
 						<?php 
 						$query = new WP_Query( 'pagename=skills' );
@@ -107,7 +107,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			<!-- END #skills -->
 
 			<!-- #works -->			
-				<section id="works" class="lander-section section">
+				<section id="works" class="lander-section section" data-anchor="section4">
 					<div class="container">
 						<?php 
 						$query = new WP_Query( 'pagename=works' );
@@ -152,9 +152,9 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 								echo '</a>';
 								echo '</figure>';
 								echo '<aside class="work-content col-xs-12 col-md-6">';
-								echo '<h2 class="works-title">';
+								echo '<h3 class="works-title">';
 								the_title();
-								echo '</h2>';
+								echo '</h3>';
 								echo '<p>';
 								the_content();
 								echo '</p>';
@@ -175,7 +175,7 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 			<!-- END #works -->
 
 			<!-- #contact -->			
-				<section id="contact" class="lander-section section">
+				<section id="contact" class="lander-section section" data-anchor="section5">
 					<div class="container">			
 						<?php 
 						$query = new WP_Query( 'pagename=contact' );

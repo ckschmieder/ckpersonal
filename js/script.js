@@ -34,10 +34,10 @@ $(function() {
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        menu: '.home-menu',
-        navigation: false,
-        lockAnchors: true,
-        anchors:['masthead', 'profile', 'skills', 'works', 'contact'],
+        menu: '#site-navigation',
+        navigation: true,
+        lockAnchors: false,
+        anchors:['section1', 'section2', 'section3', 'section4', 'section5'],
         navigationPosition: 'right',
         navigationTooltips: ['Home', 'Profile', 'Skills', 'Works', 'Contact'],
         showActiveTooltip: false,
