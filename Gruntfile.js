@@ -66,7 +66,8 @@ module.exports = function (grunt) {
 						"node_modules/jquery/dist/jquery.min.js",
 						"node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
 						"node_modules/fullpage.js/jquery.fullPage.js",
-						"js/shapes.js"
+						"js/shapes.js",
+						"js/script.js"
 
 
 					]

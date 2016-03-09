@@ -351,7 +351,7 @@
 		background: transparent;
 		color: #fff;
 		text-decoration: underline;
-		outline: solid 1px #b3b3b3;
+		outline: none;
 	}
 
 	.main-navigation a:hover {
@@ -500,7 +500,11 @@
 			    	padding: 7px 14px;
     				display: block;
     				text-decoration: none;
-    				color: #fff;
+    				color: #fff;    			
+			    }
+			    a:focus,
+			    a:hover {
+			    	outline: none;
 			    }
 		    }
 		}

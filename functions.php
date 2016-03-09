@@ -138,6 +138,7 @@ function ckpersonal_scripts() {
 	// Add Google Fonts: Fira Sans, Merriweather, and Rubik 
 	wp_enqueue_style( 'ckpersonal-google-fonts', 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Muli:400,300|Fira+Sans:400,400italic,700,700italic|Merriweather:400,700,400italic,700italic|Rubik:400,400italic,700,700italic' );
 	wp_enqueue_style( 'ckpersonal-google-fonts-hand', 'https://fonts.googleapis.com/css?family=Just+Another+Hand|Architects+Daughter|Schoolbell|Sue+Ellen+Francisco|Indie+Flower|Covered+By+Your+Grace|Gochi+Hand|Neucha' );
+	wp_enqueue_style( 'ckpersonal-arial-black-font', 'http://allfont.net/allfont.css?fonts=arial-black' );
 
 	// Add Font Awesome icons (http://fontawesome.io)
 	wp_enqueue_style( 'ckpersonal-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );

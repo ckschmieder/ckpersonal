@@ -976,7 +976,7 @@ a:hover, a:active {
     background: transparent;
     color: #fff;
     text-decoration: underline;
-    outline: solid 1px #b3b3b3;
+    outline: none;
   }
 
   .main-navigation a:hover {
@@ -1096,6 +1096,10 @@ a:hover, a:active {
     display: block;
     text-decoration: none;
     color: #fff;
+  }
+  .main-navigation ul li a:focus,
+  .main-navigation ul li a:hover {
+    outline: none;
   }
 }
 /* ul.nav-menu li a {
