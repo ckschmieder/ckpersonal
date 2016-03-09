@@ -35,7 +35,7 @@ $(function() {
 $(document).ready(function() {
     $('#fullpage').fullpage({
         menu: '#site-navigation',
-        navigation: true,
+        navigation: false,
         lockAnchors: false,
         anchors:['section1', 'section2', 'section3', 'section4', 'section5'],
         navigationPosition: 'right',
@@ -56,7 +56,8 @@ $(document).ready(function() {
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-        controlArrows: true,
+        continuousHorizonal: true,
+        controlArrows: false,
         verticalCentered: true,
         resize : true
     });

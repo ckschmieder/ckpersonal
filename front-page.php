@@ -154,14 +154,10 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 								echo '<aside class="work-content col-xs-12 col-md-6">';
 								echo '<h3 class="works-title">';
 								the_title();
-								echo '</h3>';
-								echo '<p>';
-								the_content();
-								echo '</p>';
-								echo '</aside>';
-								
+								echo '</h3>';								
+								the_content();								
+								echo '</aside>';								
 								echo '</div>';
-
 							}
 							echo '</div>';					
 						}

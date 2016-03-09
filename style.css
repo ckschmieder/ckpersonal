@@ -276,7 +276,7 @@ button,
 input,
 select,
 textarea {
-  color: #fff;
+  color: #e9e9e9;
   font-family: "Muli", serif;
   font-size: 16px;
   font-size: 1rem;
@@ -308,8 +308,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .lander-page .section-title {
   color: #e9e9e9;
-  font-family: arial black, serif;
-  font-weight: bold;
+  font-family: "Arial Black", serif;
+  font-weight: normal;
 }
 
 .lander-page .section-title:after {
@@ -490,7 +490,7 @@ big {
 }
 
 @media (min-width: 1200px) {
-  .container {
+  #profile .container {
     width: 970px;
   }
 }
@@ -559,46 +559,66 @@ dd {
   margin: 0 1.5em 1.5em;
 }
 
-.tech,
-.tools,
-.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-  margin-bottom: .4em;
-}
 .tech li,
 .tools li,
 .skills li {
-  padding: 2px 5px;
-  background-color: rgba(255, 255, 255, 0.3);
   color: #1c1c1c;
-  display: inline-block;
-  margin-right: 4px;
-  margin-bottom: 11px;
-  font-family: "futura-pt", futura, helvetica, arial, sans-serif;
+  margin-right: 6px;
+  font-family: arial narrow, futura, helvetica, arial, sans-serif;
   font-size: .9rem;
   text-transform: none;
-  line-height: 1em;
+  list-style-type: none;
 }
 
-.skills {
-  flex-flow: row wrap;
-  align-items: center;
+.skills li {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2px 5px;
+  margin-bottom: 5px;
 }
 
-@media screen and (max-width: 650px) {
+.tools {
+  margin: 0;
+  padding: 0;
+}
+.tools li {
+  color: #bbb;
+  font-family: Muli, sans-serif;
+}
+
+@media screen and (min-width: 769px) {
+  .tech,
+  .tools,
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: .4em;
+  }
   .tech li,
   .tools li,
   .skills li {
-    margin-bottom: 5px;
-    margin-right: 6px;
-    line-height: 1;
-    font-family: arial narrow, futura, helvetica, arial, sans-serif;
-    font-size: .9rem;
+    display: inline-block;
+    font-family: "futura-pt", futura, helvetica, arial, sans-serif;
+  }
+
+  .skills {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .skills li {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px 5px;
+    margin-right: 4px;
+    margin-bottom: 11px;
+  }
+}
+@media screen and (min-width: 50em) {
+  .skills li {
+    font-weight: 700;
+    font-size: .9em;
+    margin-right: 8px;
   }
 }
 img {
@@ -2498,6 +2518,17 @@ html.fp-enabled,
   margin-top: 0.5rem;
   color: #cfa144;
   font-weight: 300;
+}
+#works .work-content p {
+  padding: 5px 0 20px;
+  font-size: 1.125em;
+  color: #e9e9e9;
+}
+#works .work-content a {
+  border: 3px solid #46B6FF;
+  padding: 7px 9px;
+  border-radius: 6px;
+  color: #46B6FF;
 }
 
 .cards {

@@ -24,48 +24,80 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
+
+
 .tech,
 .tools,
 .skills {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-    margin-bottom: .4em;
-    
-    // Applies to the list of tools / tech used, found on each 'Works' page.
+
 	li {
-		padding: 2px 5px;
-	    background-color: rgba(255, 255, 255, 0.3);
-	    color: #1c1c1c;
-	    display: inline-block;
-	    margin-right: 4px;
-	    margin-bottom: 11px;
-	    font-family: "futura-pt", futura, helvetica, arial, sans-serif;
-	    font-size: .9rem;
-	    text-transform: none;
-	    line-height: 1em;
+		color: #1c1c1c;		
+		margin-right: 6px;
+		font-family: arial narrow, futura, helvetica, arial, sans-serif;
+		font-size: .9rem;
+		text-transform: none;
+		list-style-type: none;
 	}
+}	
+
+.skills li {
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 2px 5px; 
+	margin-bottom: 5px;
 }
 
-.skills {
-	flex-flow: row wrap;
-	align-items: center; 
-}
+.tools {	
+	margin: 0;
+	padding: 0;
 
-@media screen and (max-width: 650px) {
+	
+	li {
+		color: #bbb;
+		font-family: Muli, sans-serif;
+	}
+}	
+
+
+@media screen and (min-width: 769px) {
 	.tech,
 	.tools,
 	.skills {
-		li { 
-		    margin-bottom: 5px;
-			margin-right: 6px;
-			line-height: 1;
-			font-family: arial narrow, futura, helvetica, arial, sans-serif;
-			font-size: .9rem;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: flex-start;
+	    margin-left: 0;
+	    padding-left: 0;
+	    margin-bottom: .4em;
+	    
+	    // Applies to the list of tools / tech used, found on each 'Works' page.
+		li {
+			display: inline-block;
+		    font-family: "futura-pt", futura, helvetica, arial, sans-serif;
+		    // line-height: 1em;
 		}
-	}	
+	}
+
+
+	.skills {
+		flex-flow: row wrap;
+		align-items: center; 
+
+		li {
+			background-color: rgba(255, 255, 255, 0.3);
+			padding: 2px 5px;
+		    margin-right: 4px;
+		    margin-bottom: 11px;
+		}
+	}
+
 } 
- 
+
+@media screen and (min-width: 50em) {
+
+	.skills li {
+		font-weight: 700;
+		font-size: .9em;
+		margin-right: 8px;
+	}
+
+}

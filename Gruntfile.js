@@ -11,13 +11,13 @@ module.exports = function (grunt) {
 					'sass/*.scss',
 					'sass/**/*.scss'
 				],
-				tasks: ['default']
+				tasks: ['sass:production']
 			},
 			js     : {
 				files: [
 					'js/*.js'
 				],
-				tasks: ['default']
+				tasks: ['uglify:theme']
 			}
 
 		},
@@ -42,8 +42,7 @@ module.exports = function (grunt) {
 					precision: 4
 				},
 				files  : {
-					'style.css': 'sass/style.scss',
-					'style-front-page.css': 'sass/style-front-page.scss'
+					'style.css': 'sass/style.scss'
 				}
 			}
 		},
@@ -87,7 +86,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 
 
-	grunt.registerTask('default', ['sass:production', 'uglify:theme', 'autoprefixer', 'cssmin']);
+	grunt.registerTask('default', ['sass:production', 'uglify:theme', 'autoprefixer', 'watch' /*'cssmin'*/]);
 
 
 };
