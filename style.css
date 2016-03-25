@@ -299,11 +299,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lander-page h3 {
-  color: #cfa144;
+  color: #42dca3;
 }
 
 .lander-page h4 {
-  color: #cfa144;
+  color: #42dca3;
 }
 
 .lander-page .section-title {
@@ -314,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .lander-page .section-title:after {
   content: ".";
-  color: #46B6FF;
+  color: #bd235c;
 }
 
 h1 {
@@ -509,7 +509,7 @@ html {
 }
 
 body {
-  background: #242424;
+  background: #000;
   /* Fallback for when there is no custom background color defined. */
   position: relative;
 }
@@ -562,7 +562,7 @@ dd {
 .tech li,
 .tools li,
 .skills li {
-  color: #1c1c1c;
+  color: #101010;
   margin-right: 6px;
   font-family: arial narrow, futura, helvetica, arial, sans-serif;
   font-size: .9rem;
@@ -2357,7 +2357,7 @@ html.fp-enabled,
   width: 100%;
   overflow: hidden;
   z-index: 2;
-  background: #242424;
+  background: #000;
 }
 
 .section-title {
@@ -2384,7 +2384,7 @@ html.fp-enabled,
   vertical-align: top;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .fp-tableCell {
     vertical-align: middle;
     padding-bottom: 96px;
@@ -2508,7 +2508,7 @@ html.fp-enabled,
   text-align: center;
 }
 #works figure.work-thumb img {
-  width: 90%;
+  width: 95%;
   max-width: 100%;
 }
 #works .project.row:last-child {
@@ -2516,19 +2516,25 @@ html.fp-enabled,
 }
 #works .works-title {
   margin-top: 0.5rem;
-  color: #cfa144;
+  color: #42dca3;
   font-weight: 300;
 }
 #works .work-content p {
-  padding: 5px 0 20px;
-  font-size: 1.125em;
+  padding: 5px 0 0;
+  font-size: 1em;
   color: #e9e9e9;
 }
 #works .work-content a {
-  border: 3px solid #46B6FF;
+  border: 3px solid #42dca3;
   padding: 7px 9px;
   border-radius: 6px;
-  color: #46B6FF;
+  color: #42dca3;
+}
+#works .work-content a:hover,
+#works .work-content a:focus {
+  background-color: #42dca3;
+  color: #000;
+  text-decoration: none;
 }
 
 .cards {
@@ -2635,7 +2641,7 @@ html.fp-enabled,
 #contact input#send,
 #contact .widget_meta abbr,
 #contact input#submit {
-  color: #cfa144;
+  color: #42dca3;
 }
 #contact input#send {
   background: #272727;
@@ -2644,7 +2650,7 @@ html.fp-enabled,
   background: #272727;
   margin-top: 10px;
   border: none;
-  color: #cfa144;
+  color: #42dca3;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;

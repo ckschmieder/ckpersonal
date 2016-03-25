@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 
 
-	grunt.registerTask('default', ['sass:production', 'uglify:theme', 'autoprefixer', 'watch' /*'cssmin'*/]);
+	grunt.registerTask('default', ['sass:production', 'uglify:theme', 'autoprefixer' /*'cssmin'*/]);
 
 
 };

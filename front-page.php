@@ -144,14 +144,14 @@ global $more;		// Should WP display the conent after ---more--- ? (0=false; 1=tr
 
 								echo '<div class="slide">';
 								echo '<div class="project row">';
-								echo '<figure class="work-thumb col-xs-12 col-md-6">';
+								echo '<figure class="work-thumb col-xs-12 col-sm-6">';
 								echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
 								
 								the_post_thumbnail( 'lander-thumb-sm');
 								
 								echo '</a>';
 								echo '</figure>';
-								echo '<aside class="work-content col-xs-12 col-md-6">';
+								echo '<aside class="work-content col-xs-12 col-sm-6">';
 								echo '<h3 class="works-title">';
 								the_title();
 								echo '</h3>';								

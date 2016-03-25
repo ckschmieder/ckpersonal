@@ -74,7 +74,7 @@
     width: 100%;
     overflow: hidden;
     z-index: 2;
-    background: #242424;
+    background: #000;
  }
 
 .section-title {
@@ -112,7 +112,7 @@
     vertical-align: top;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
    .fp-tableCell {
         vertical-align: middle;
         padding-bottom: 96px;
@@ -272,7 +272,7 @@
         text-align: center;
 
         img {
-            width: 90%;
+            width: 95%;
             max-width: 100%;
         }
     }
@@ -283,22 +283,30 @@
 
     .works-title {
         margin-top: 0.5rem;
-        color: #cfa144;
+        color: $color_primary;
         // color: $color_blue;
         font-weight: 300;
     }
 
     .work-content p {
-        padding: 5px 0 20px;
-        font-size: 1.125em;
-        color: $color__text-main;
+        padding: 5px 0 0;
+        font-size: 1em;
+        color: $color__text-main; 
     }
 
+
+    // Button to view site
     .work-content a {
-        border: 3px solid #46B6FF;
+        border: 3px solid $color_secondary;
         padding: 7px 9px;
         border-radius: 6px;
-        color: #46B6FF;
+        color: $color_secondary;
+    }
+    .work-content a:hover,
+    .work-content a:focus { 
+        background-color: $color_secondary;
+        color: #000;
+        text-decoration: none;
     }
 }
 
@@ -429,7 +437,7 @@
     input#send,
     .widget_meta abbr,
     input#submit {
-        color: #cfa144;
+        color: $color_primary;
     }
 
     input#send {
@@ -440,7 +448,7 @@
         background: #272727;
         margin-top: 10px;
         border: none;
-        color: #cfa144;
+        color: $color_primary;
         display: inline-block;
         font-size: 16px;
         cursor: pointer;

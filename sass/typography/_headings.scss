@@ -8,10 +8,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lander-page h3 {
-	color: $color_golden;
+	color: $color_primary;
 }
 .lander-page h4 {
-	color: $color_golden;
+	color: $color_primary;
 }
 
 .lander-page .section-title {
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .lander-page .section-title:after {
 	content: ".";
-	color: #46B6FF;
+	color: #bd235c;
 }
 
 h1 { @include font-size-em(2.6); }

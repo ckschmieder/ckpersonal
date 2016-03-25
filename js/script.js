@@ -29,6 +29,9 @@ $(function() {
       } //click function
     }); //smooth scrolling*/
 
+    $('body').scrollspy({
+        target: '#site-navigation'
+    })
 
 });
 
